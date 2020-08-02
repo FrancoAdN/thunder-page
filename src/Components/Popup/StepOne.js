@@ -440,7 +440,7 @@ export default function StepOne({ set }) {
                                 <img src={jungle} className="image-champ2" alt="" />
                             </div>
                         </div>
-                        <div className="continue" style={{ visibility: cont }} onClick={() => set(true)}>
+                        <div className="continue2" style={{ visibility: cont }} onClick={() => set(true)}>
                             <p className="cont text-center"> Continuar </p>
                         </div>
                     </div>

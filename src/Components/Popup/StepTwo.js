@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext, useRef } from 'react'
 import { prov } from './_useHook'
 import Header from './Header'
 // import './style2.css'
-import './style3.css'
+import './step2.css'
 // import thunder from './thunder.png'
 import payments from './payments.png'
 import payments2 from './payments2.png'
@@ -178,7 +178,7 @@ export default function StepTwo() {
                             <img alt="" className="rapipago" src={rapipago} />
                         </div>
                     </div>
-                    <div className="card6">
+                    <div className="card9">
                         <p className="card-title2"> DETALLES </p>
                         <hr />
                         <div className="info-rank">

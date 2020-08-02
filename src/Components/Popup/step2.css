@@ -1,20 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
-.form {
-    top: 2em;
-    max-width: 1200px;
-    height: 620px;
-    background: white;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    border-bottom-right-radius:60px;
-    border-bottom-left-radius:60px;
-}
-
 .main-section {
     font-family: "Raleway", sans-serif;
     position: absolute;
     top: 80px;
-    left: 80px;
+    left: 0px;
     width: 1200px;
     height: 620px;
     background: #ffffff;
@@ -29,77 +17,25 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 1200px;
+    width: 1140px;
     height: 80px;
+    left: 60px;
     background: #d8d6d6;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-}
-
-.header-section p {
-    font-size: 20px;
-    line-height: 1em;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-left: -30px;
-    margin-top: 30px;
 }
 
 .division {
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 1200px;
+    width: 1140px;
     height: 80px;
     background-color: #e9e8e8;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
     border-style: hidden hidden solid hidden;
     border-color: #cccccc;
-}
-
-.division:hover {
-    background: #ffffff;
-    border-style: solid hidden hidden hidden;
-    border-color: #f00fdd;
-    border-width: 3px;
-}
-
-.division2 {
-    position: absolute;
-    top: 0px;
-    left: 400px;
-    width: 400px;
-    height: 80px;
-    background-color: #e9e8e8;
-    border-style: hidden hidden solid hidden;
-    border-color: #cccccc;
-}
-
-.division2:hover {
-    background: #ffffff;
-    border-style: solid hidden hidden hidden;
-    border-color: #f00fdd;
-    border-width: 3px;
-}
-
-.division3 {
-    position: absolute;
-    top: 0px;
-    left: 800px;
-    width: 400px;
-    height: 80px;
-    background-color: #e9e8e8;
-    border-top-right-radius: 60px;
-    border-style: hidden hidden solid hidden;
-    border-color: #cccccc;
-}
-
-.division3:hover {
-    background: #ffffff;
-    border-style: solid hidden hidden hidden;
-    border-color: #f00fdd;
-    border-width: 3px;
 }
 
 .main-section h1 {
@@ -107,7 +43,6 @@
     margin-top: 20px;
 
 }
-
 
 .sub-title {
     line-height: 1em;
@@ -173,7 +108,7 @@
 
 .img-fluid3 {
     position: absolute;
-    left: 0px;
+    left: 20px;
     top: 24px;
     width: 30px;
     height: 30px;
@@ -249,10 +184,10 @@
     border: none;
 }
 
-.continue2 {
+.continue {
     position: absolute;
-    left: 300px;
-    top: 430px;
+    left: 900px;
+    top: 550px;
     width: 200px;
     height: 50px;
     font-size: 12px;
@@ -370,12 +305,12 @@
 
 /* --- CARD 6 --- */
 
-.card6 {
+.card9 {
     position: absolute;
-    top: 120px;
-    left: 600px;
-    width: 550px;
-    height: 415px;
+    top: 110px;
+    left: 820px;
+    width: 350px;
+    height: 450px;
     background: #ffffff;
     border-radius: 50px;
     -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
@@ -386,46 +321,46 @@
 .card-title2 {
     font-size: 20px;
     font-weight: 600;
-    margin-left: 250px;
+    margin-left: 130px;
     margin-top: 10px;
 }
 
-.card6 hr {
-    width: 350px;
+.card9 hr {
+    width: 250px;
 }
 
-.price-a {
+.card9 .price-a {
     margin-left: 40px;
     margin-top: -10px;
     font-size: 14px;
     font-weight: 600;
 }
 
-.price-b {
-    margin-left: 250px;
+.card9 .price-b {
+    margin-left: 150px;
     margin-top: -10px;
     font-size: 14px;
     font-weight: 600;
     color: #b8b9b8;
 }
 
-.price-c {
-    margin-left: 225px;
+.card9 .price-c {
+    margin-left: 125px;
     margin-top: -15px;
     font-size: 22px;
     font-weight: 600;
     color: #a82cda;
 }
 
-.time-a {
+.card9 .time-a {
     margin-left: 40px;
     margin-top: 0px;
     font-size: 14px;
     font-weight: 600;
 }
 
-.time-b {
-    margin-left: 250px;
+.card9 .time-b {
+    margin-left: 150px;
     margin-top: -50px;
     font-size: 22px;
     font-weight: 600;
@@ -487,5 +422,166 @@
     margin-top: -45px;
     width: 35px;
     height: 35px;
+}
+
+.info-card {
+    width: 750px;
+    height: 450px;
+    background: #ffffff;
+    margin-left: 35px;
+    border-radius: 50px;
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+    box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+}
+
+.info-container {
+    width: 750px;
+    height: 450px;
+    border-radius: 50px;
+    padding-top: 10px;
+    margin-left: 30px;
+}
+
+.info-container input {
+    width: 210px;
+}
+
+.info-container input:hover {
+    border-color: rgb(218, 49, 218);
+}
+
+.info-container label {
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
+.contact label {
+    margin-top: 10px;
+}
+
+.contact input {
+    width: 670px;
+    height: 150px;
+}
+
+.user {
+    position: absolute;
+    top: 117px;
+    left: 295px;
+}
+
+.pass {
+    position: absolute;
+    top: 117px;
+    left: 525px;
+}
+
+.cemail {
+    position: absolute;
+    top: 176px;
+    left: 295px;
+}
+
+.ref {
+    position: absolute;
+    top: 176px;
+    left: 525px;
+}
+
+.opc-pago {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.info-container hr {
+    margin-left: 5px;
+    margin-top: -5px;
+    width: 650px;
+}
+
+.info-container label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.payments2 {
+    margin-left: -40px;
+}
+
+.brubank {
+    margin-left: -45px;
+    margin-top: -5px;
+}
+
+.info-rank {
+    width: 300px;
+    height: 175px;
+}
+
+.info-rank p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.info-rank img {
+    margin-top: -20px;
+    width: 125px;
+}
+
+.actual {
+    margin-left: 50px;
+    width: 125px;
+    height: 125px;
+}
+
+.proximo {
+    margin-top: -125px;
+    margin-left: 185px;
+    width: 125px;
+    height: 125px;
+}
+
+.info-rank-p {
+    margin-top: -10px;
+    margin-bottom: -5px;
+}
+
+.pay {
+    position: absolute;
+    left: 80px;
+    top: 430px;
+    width: 200px;
+    height: 50px;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #ff589e;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.25px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    border-radius: 50px;
+    -webkit-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
+}
+
+.pay:hover {
+    background-color: rgb(218, 49, 218);
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
+}
+
+.button-pay {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 12px;
+    color: #ffffff;
 }
 
