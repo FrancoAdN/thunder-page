@@ -29,8 +29,6 @@ export default function StepOne({ set }) {
         serverRef, modeRef, fastRef
     } = useContext(prov)
 
-    console.log(price, setPrice)
-
     const fromRef = useRef()
     const toRef = useRef()
     const [visFrom, setVisFrom] = useState('visible')
@@ -49,7 +47,6 @@ export default function StepOne({ set }) {
 
         divFromRef.current = "4"
         divToRef.current = "4"
-        console.log(divFromRef)
 
     }, [])
 
@@ -64,94 +61,130 @@ export default function StepOne({ set }) {
     }
 
     const pricing = [
-        { from: 'Iron', to: 'Bronze', price: 1250, days: 5 },
-        { from: 'Bronze', to: 'Silver', price: 1450, days: 5 },
-        { from: 'Silver', to: 'Gold', price: 1820, days: 6 },
-        { from: 'Gold', to: 'Platinium', price: 2500, days: 7 },
-        { from: 'Platinium', to: 'Diamond', price: 3450, days: 7 },
-        { from: 'Diamond', to: 'Master', price: 16500, days: 11 },
-        { from: 'Master', to: 'Grand Master', price: 23800, days: 15 },
-        { from: 'Grand Master', to: 'Challenger', price: 30500, days: 22 }
+        { rank: 'Iron', price_per_div: 150, days_per_div: 0.5 },
+        { rank: 'Bronze', price_per_div: 250, days_per_div: 1 },
+        { rank: 'Silver', price_per_div: 350, days_per_div: 1.5 },
+        { rank: 'Gold', price_per_div: 450, days_per_div: 1.5 },
+        { rank: 'Platinium', price_per_div: 650, days_per_div: 2 },
+        { rank: 'Diamond' },
+        { rank: 'Master' }
     ]
 
+
+
     const calculatePrice = () => {
-        let foundFrom = false
-        let foundTo = false
-        let currentPrice = 0
-        let currentDays = 0
 
-        for (const div of pricing) {
+        const fromIndex = getIndexOfRank(fromRef.current)
+        const toIndex = getIndexOfRank(toRef.current)
 
-            if (!foundFrom) {
-                if (fromRef.current === div.from) {
-                    foundFrom = true
-                    currentPrice += div.price
-                    currentDays += div.days
-                    if (toRef.current === div.to) {
-                        foundTo = true
-                        break
+        setPrice(0)
+        const intDivFrom = parseInt(divFromRef.current)
+        const intDivTo = parseInt(divToRef.current)
+        if (fromIndex <= toIndex) {
+            if (fromIndex !== toIndex && toIndex < 5) {
+                let currPrice = 0
+
+                for (let i = fromIndex + 1; i < toIndex; i++) {
+                    currPrice += pricing[i].price_per_div * 4
+                }
+
+                currPrice += pricing[fromIndex].price_per_div * intDivFrom
+
+                currPrice += pricing[toIndex].price_per_div * (4 - intDivTo)
+
+                setPrice(currPrice)
+
+            } else if (fromIndex === toIndex && toIndex < 5) {
+                if (intDivFrom > intDivTo) {
+                    setPrice(pricing[fromIndex].price_per_div * (intDivFrom - intDivTo))
+                }
+
+            } else if (toIndex >= 5) {
+
+                if (fromIndex !== 5) {
+                    let currPrice = 0
+
+                    for (let i = fromIndex + 1; i < 5; i++) {
+                        currPrice += pricing[i].price_per_div * 4
                     }
+
+                    if (toIndex === 5) {
+                        if (intDivTo === 3) {
+                            currPrice += 1500
+                        } else if (intDivTo === 2) {
+                            currPrice += 3500
+                        } else if (intDivTo === 1) {
+                            currPrice += 6000
+                        }
+                    } else if (toIndex === 6) {
+                        currPrice += 9500
+                    }
+
+                    currPrice += pricing[fromIndex].price_per_div * intDivFrom
+
+                    setPrice(currPrice)
+
+
+                } else if (fromIndex === 5) {
+                    if (toIndex === fromIndex) {
+
+                        if (intDivFrom === 4 && intDivTo < intDivFrom) {
+                            if (intDivTo === 3) {
+                                setPrice(1500)
+                            } else if (intDivTo === 2) {
+                                setPrice(3500)
+                            } else if (intDivTo === 1) {
+                                setPrice(6000)
+                            }
+                        } else if (intDivFrom === 3 && intDivTo < intDivFrom) {
+                            if (intDivTo === 2) {
+                                setPrice(2000)
+                            } else if (intDivTo === 1) {
+                                setPrice(4500)
+                            }
+                        } else if (intDivFrom === 2 && intDivTo < intDivFrom) {
+                            setPrice(2500)
+                        } else {
+                            setPrice(0)
+                        }
+
+                    } else {
+                        if (intDivFrom === 4) {
+                            setPrice(9500)
+                        } else if (intDivFrom === 3) {
+                            setPrice(8000)
+                        } else if (intDivFrom === 2) {
+                            setPrice(6000)
+                        } else {
+                            setPrice(3500)
+                        }
+                    }
+
                 }
 
-            } else {
-                currentPrice += div.price
-                currentDays += div.days
-                if (toRef.current === div.to) {
-                    foundTo = true
-                    break
-                }
             }
         }
 
+        if (serverRef.current === 'BR') {
+            setPrice(price => price + (price / 2))
+        }
 
-        if (foundTo) {
+        if (modeRef.current === 'DUO') {
+            setPrice(price => price * 2)
+        }
 
-            setDays(currentDays)
-
-            if (serverRef.current === "LAS") setPrice(currentPrice)
-            else setPrice(currentPrice + currentPrice * 0.45)
-
-            if (modeRef.current === "DUO") setPrice(price => price + price * 0.75)
-            if (fastRef.current) {
-                setDays(days => days - days * 0.35)
-                setPrice(price => price + price * 0.25)
-            }
-            if ((toRef.current !== "Challenger") && (toRef.current !== "Master") && (toRef.current !== "Grand Master"))
-                divitionProfit()
-
-            setPrice(price => Math.round(price))
-            setDays(days => Math.round(days))
-
-        } else if ((fromRef.current === toRef.current) && ((toRef.current !== "Challenger") && (toRef.current !== "Master") && (toRef.current !== "Grand Master"))) {
-
-            const next = getCurrent(fromRef.current)
-            setPrice(next.price - next.price * 0.3)
-            setDays(next.days - next.days * 0.3)
-            let dif = 0
-            if (divFromRef.current === "3") dif = 0.15
-            else if (divFromRef.current === "2") dif = 0.3
-            else if (divFromRef.current === "1") dif = 0.7
-            setPrice(price => price - next.price * dif)
-            setDays(days => days - next.days * dif)
-
-            if (serverRef.current !== "LAS") setPrice(price => price + price * 0.45)
-
-            if (modeRef.current === "DUO") setPrice(price => price + price * 0.75)
-            if (fastRef.current) {
-                setDays(days => days - days * 0.35)
-                setPrice(price => price + price * 0.25)
-            }
-
-            setPrice(price => Math.round(price))
-            setDays(days => Math.round(days))
-
-
-        } else {
-            setPrice(0)
-            setDays(0)
+        if (fastRef.current) {
+            setPrice(price => price + (price / 2))
         }
 
 
+    }
+
+    function getIndexOfRank(rank) {
+        for (let i = 0; i < pricing.length; i++) {
+            if (pricing[i].rank === rank)
+                return i
+        }
     }
 
 
@@ -186,14 +219,6 @@ export default function StepOne({ set }) {
                 setImg(rank3)
                 set('hidden')
                 break
-            case "Grand Master":
-                setImg(rank2)
-                set('hidden')
-                break
-            case "Challenger":
-                setImg(rank1)
-                set('hidden')
-                break
 
         }
         calculatePrice()
@@ -209,69 +234,7 @@ export default function StepOne({ set }) {
         calculatePrice()
     }
 
-    const divitionProfit = () => {
 
-
-        if (divFromRef.current === "4") {
-            if (divToRef.current === "4")
-                setPrice(price => price)
-            else {
-                const next = getNext(toRef.current)
-                setProfit(next)
-
-            }
-
-        } else if (divFromRef.current === "3") {
-            const next = getCurrent(fromRef.current)
-            setPrice(price => price - next.price * 0.15)
-            setDays(days => days - next.days * 0.15)
-            setProfit(getNext(toRef.current))
-
-        } else if (divFromRef.current === "2") {
-            const next = getCurrent(fromRef.current)
-            setPrice(price => price - next.price * 0.3)
-            setDays(days => days - next.days * 0.3)
-            setProfit(getNext(toRef.current))
-        } else if (divFromRef.current === "1") {
-            const next = getCurrent(fromRef.current)
-            setPrice(price => price - next.price * 0.7)
-            setDays(days => days - next.days * 0.7)
-            setProfit(getNext(toRef.current))
-        }
-
-
-
-
-    }
-
-    const setProfit = (next) => {
-        if (divToRef.current === "3") {
-            setPrice(price => price + next.price * 0.15)
-            setDays(days => days + next.days * 0.15)
-        } else if (divToRef.current === "2") {
-            setPrice(price => price + next.price * 0.3)
-            setDays(days => days + next.days * 0.3)
-        } else if (divToRef.current === "1") {
-            setPrice(price => price + next.price * 0.7)
-            setDays(days => days + next.days * 0.7)
-        }
-    }
-
-    const getNext = (current) => {
-        for (let i = 0; i < pricing.length; i++) {
-            if (pricing[i].to === current) {
-                return { price: pricing[i + 1].price, days: pricing[i + 1].days }
-            }
-        }
-    }
-
-    const getCurrent = (current) => {
-        for (let i = 0; i < pricing.length; i++) {
-            if (pricing[i].from === current) {
-                return { price: pricing[i].price, days: pricing[i].days }
-            }
-        }
-    }
 
 
     return (
@@ -303,9 +266,8 @@ export default function StepOne({ set }) {
                                     <option value="Gold">Gold</option>
                                     <option value="Platinium">Platinium</option>
                                     <option value="Diamond">Diamond</option>
-                                    <option value="Master">Master</option>
-                                    <option value="Grand Master">Grand Master</option>
-                                    <option value="Challenger">Challenger</option>
+                                    {/* <option value="Grand Master">Grand Master</option>
+                                    <option value="Challenger">Challenger</option> */}
                                 </select>
                             </div>
                             <div className="divition" style={{ visibility: visFrom }}>
@@ -343,8 +305,8 @@ export default function StepOne({ set }) {
                                     <option value="Platinium">Platinium</option>
                                     <option value="Diamond">Diamond</option>
                                     <option value="Master">Master</option>
-                                    <option value="Grand Master">Grand Master</option>
-                                    <option value="Challenger">Challenger</option>
+                                    {/* <option value="Grand Master">Grand Master</option>
+                                    <option value="Challenger">Challenger</option> */}
                                 </select>
                             </div>
                             <div className="divition" style={{ visibility: visTo }}>
