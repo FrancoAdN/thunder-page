@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useContext } from 'react'
+import ModalLanes from './Modals/ModalLanes'
 import Header from './Header'
 import './style.css'
 import './responsive.css'
@@ -36,6 +37,7 @@ export default function StepOne({ set }) {
     const [from, setFrom] = useState(rank9)
     const [to, setTo] = useState(rank9)
     const [cont, setCont] = useState('hidden')
+    const [lanes, setLanes] = useState(false)
 
 
     useEffect(() => {
@@ -69,8 +71,6 @@ export default function StepOne({ set }) {
         { rank: 'Diamond' },
         { rank: 'Master' }
     ]
-
-
 
     const calculatePrice = () => {
 
@@ -187,7 +187,6 @@ export default function StepOne({ set }) {
         }
     }
 
-
     const handleSelect = (e, setImg, set) => {
 
         switch (e.target.value) {
@@ -232,6 +231,10 @@ export default function StepOne({ set }) {
     const changeDivision = (e, refDiv) => {
         refDiv.current = e.target.value
         calculatePrice()
+    }
+
+    const handleLanes = (e) => {
+        setLanes(e.target.checked)
     }
 
 
@@ -392,7 +395,8 @@ export default function StepOne({ set }) {
                                 <i><img src="https://img.icons8.com/color/48/000000/league-of-legends.png"
                                     className="server-icon text-center" alt="" /></i>
                                 <p className="server-title"> Fijar roles </p>
-                                <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" />
+                                <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleLanes} />
+                                <ModalLanes lanes={lanes} setLanes={setLanes} />
                             </div>
                             <div className="image-container2">
                                 <img src={jungle} className="image-champ2" alt="" />

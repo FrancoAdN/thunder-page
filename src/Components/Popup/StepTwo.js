@@ -44,8 +44,8 @@ export default function StepTwo() {
         //         break
         // }
 
-        divFromRef.current = romanize("3")
-        divToRef.current = romanize("4")
+        divFromRef.current = romanize(divFromRef.current)
+        divToRef.current = romanize(divToRef.current)
 
         switch (fromRank) {
             case 'Iron':

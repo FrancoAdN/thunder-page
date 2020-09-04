@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
-// import Main from './Components/Main'
-import StepOne from './Components/Popup/StepOne'
-import StepTwo from './Components/Popup/StepTwo'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Main from './Components/Main'
+
 import StateProvider from './Components/Popup/_useHook'
+import Popup from './Components/Popup/Popup'
+import Modal from 'react-modal'
+
+Modal.setAppElement('#root');
 function App() {
-  const [two, setTwo] = useState(false)
+
   return (
-    // <div>
-    //   <StepOne />
-    //   {/* <Main /> */}
-    // </div>
-    <StateProvider>
-      {two ? <StepTwo /> : <StepOne set={setTwo} />}
-    </StateProvider>
+    <BrowserRouter>
+      <Switch>
+        <Route component={Main} path="/" exact />
+        <Route component={Boost} path="/boost" exact />
+      </Switch>
+    </BrowserRouter>
   );
+}
+
+function Boost() {
+  return (
+    <StateProvider>
+      <Popup />
+    </StateProvider>
+  )
 }
 
 

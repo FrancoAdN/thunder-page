@@ -6,8 +6,8 @@
     background: white;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    border-bottom-right-radius:60px;
-    border-bottom-left-radius:60px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
 }
 
 .main-section {
@@ -18,11 +18,11 @@
     width: 1200px;
     height: 620px;
     background: #ffffff;
-    border-bottom-left-radius:60px;
-    border-bottom-right-radius:60px;
-    -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
 .header-section {
@@ -105,9 +105,7 @@
 .main-section h1 {
     font-size: 26px;
     margin-top: 20px;
-
 }
-
 
 .sub-title {
     line-height: 1em;
@@ -121,9 +119,9 @@
     margin-left: 30px;
     margin-top: 30px;
     border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
+    box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
 }
 
 .card-container {
@@ -139,9 +137,9 @@
     background: #ffffff;
     margin-left: 35px;
     border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
+    box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
 }
 
 .card2-container {
@@ -195,7 +193,6 @@
     height: 50px;
     background: #f1f0f0;
     border-radius: 50px;
-
 }
 
 .rank select {
@@ -209,7 +206,7 @@
     border: none;
 }
 
-.divition select{
+.divition select {
     position: absolute;
     left: 15px;
     background: #f1f0f0;
@@ -266,16 +263,16 @@
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 17px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 17px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 17px -9px rgba(0, 0, 0, 0.75);
 }
 
 .continue:hover {
     background-color: rgb(218, 49, 218);
-    -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
 .cont {
@@ -336,7 +333,6 @@
     margin-left: 20px;
     background: #ffffff;
     border-radius: 50px;
-
 }
 
 .modo {
@@ -353,7 +349,6 @@
     border: none;
 }
 
-
 /* --- CARD ---- 5 */
 
 .card5 {
@@ -367,7 +362,6 @@
     border-radius: 50px;
 }
 
-
 /* --- CARD 6 --- */
 
 .card6 {
@@ -378,9 +372,9 @@
     height: 415px;
     background: #ffffff;
     border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+    -webkit-box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
+    -moz-box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
+    box-shadow: 10px 10px 5px -6px rgba(148, 148, 148, 1);
 }
 
 .card-title2 {
@@ -488,4 +482,3 @@
     width: 35px;
     height: 35px;
 }
-

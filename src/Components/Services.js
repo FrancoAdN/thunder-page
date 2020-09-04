@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-// import Popup from './Popup/Popup'
+
 export default function Services() {
-    const [pop, setPop] = useState(false)
     return (
         <section className="mini" id="services">
             {/* <Popup open={pop} setOpen={setPop} /> */}
@@ -29,7 +28,7 @@ export default function Services() {
                         </div>
                     </div>
                     <main className="page-content">
-                        <div className="card">
+                        <div className="card-content">
                             <div className="content">
                                 <h2 className="title">Boosting Solo/Duo Queue</h2>
                                 <p className="copy">Solo tienes que elegir la liga en la que quieres estar y el resto lo hacemos
@@ -37,28 +36,28 @@ export default function Services() {
                                 <button className="btn"> ¡Contratar! </button>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card-content">
                             <div className="content">
                                 <h2 className="title">Boost Solo/Duo Promotion</h2>
                                 <p className="copy"> Si te encuentras a solo un paso de avanzar de liga, esta asegura la
                                 victoria de su promocion. </p>
-                                <button className="btn" onClick={() => setPop(true)}> ¡Contratar! </button>
+                                <button className="btn" onClick={() => { }}> ¡Contratar! </button>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card-content">
                             <div className="content">
                                 <h2 className="title">Boost Solo/Duo Victory Wins</h2>
                                 <p className="copy"> Si lo que necesitas es solo acumular una cantidad de victorias, esta opción
                                 es para ti!</p>
-                                <button className="btn" onClick={() => setPop(true)}> ¡Contratar! </button>
+                                <button className="btn" onClick={() => { }}> ¡Contratar! </button>
                             </div>
                         </div>
-                        <div className="card">
+                        <div className="card-content">
                             <div className="content">
                                 <h2 className="title">Boosting Flex (5v5) Queue</h2>
                                 <p className="copy"> Solo tienes que elegir la liga en la que quieres estar y el resto lo
                                 hacemos nosotros. </p>
-                                <button className="btn" onClick={() => setPop(true)}> ¡Contratar! </button>
+                                <button className="btn" onClick={() => { }}> ¡Contratar! </button>
                             </div>
                         </div>
                     </main>

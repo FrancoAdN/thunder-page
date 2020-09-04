@@ -1,0 +1,57 @@
+.modal-lanes {
+    width: 520px;
+    position: absolute;
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont-div {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.div-lane {
+    width: 80px;
+    height: 100px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.div-lane img {
+    width: 45px;
+    height: 45px;
+}
+
+.btn-wrapper {
+    margin-top: 50px;
+    display: inline-flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-roles {
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: crimson;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+}
