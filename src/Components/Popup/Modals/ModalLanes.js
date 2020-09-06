@@ -1,34 +1,48 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
 import './modals.css'
-import top from '../top.png'
-import jungle from '../jungle.png'
-import mid from '../mid.png'
-import bot from '../bot.png'
-import support from '../support.png'
+import top from '../TOP.png'
+import jungle from '../JUNGLER.png'
+import mid from '../MID.png'
+import bot from '../BOT.png'
+import support from '../SUPPORT.png'
 
-export default function ModalLanes({ lanes, setLanes }) {
-    const [prefLanes, setPrefLanes] = useState([])
+export default function ModalLanes({ openLanes, setOpenLanes, setLanes, lanes }) {
+
+    const [check, setCheck] = useState(false)
+
+    useEffect(() => {
+        if (openLanes)
+            setCheck(false)
+    }, [openLanes])
+
     const close = () => {
-        setLanes(false)
+        document.getElementById("checkLanes").checked = check
+        setOpenLanes(false)
     }
     const handleCheck = (e, role) => {
-        if (e.target.checked) {
-            setPrefLanes(prefLanes => [...prefLanes, role])
-        } else {
-            const index = prefLanes.findIndex(item => item === role)
-            if (index)
-                setPrefLanes(prefLanes => prefLanes.splice(index, 1))
-
+        if (e.target.checked === true) {
+            setLanes(lanes => [...lanes, role])
+            setCheck(true)
         }
-    }
-    const handleOnclick = () => {
-        console.log(prefLanes)
+        else {
+            let aux = lanes
+            for (let index = 0; index < aux.length; index++) {
+                const element = aux[index];
+                if (element === role) {
+                    aux.splice(index, 1)
+                    if (aux.length === 0)
+                        setCheck(false)
+                    break
+                }
+            }
+            setLanes(aux)
+        }
     }
 
     return (
         <Modal
-            isOpen={lanes}
+            isOpen={openLanes}
             onRequestClose={close}
             className={"modal-lanes"}>
             <div className="cont-div">
@@ -58,9 +72,9 @@ export default function ModalLanes({ lanes, setLanes }) {
                     <input type="checkbox" onChange={(e) => handleCheck(e, 'SUPPORT')} />
                 </div>
             </div>
-            <div className="btn-wrapper">
+            {/* <div className="btn-wrapper">
                 <button className="btn-roles" onClick={handleOnclick}>FIJAR ROLES</button>
-            </div>
+            </div> */}
 
         </Modal>
     )

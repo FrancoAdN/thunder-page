@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from 'react'
 import ModalLanes from './Modals/ModalLanes'
+import ModalChamps from './Modals/ModalChamps'
 import Header from './Header'
 import './style.css'
 import './responsive.css'
@@ -16,14 +17,19 @@ import { prov } from './_useHook'
 
 // import victory from './victory.png'
 // import thunder from './thunder.png'
-import example from './example.png'
-import jungle from './jungle.png'
+import top from './TOP.png'
+import jungler from './JUNGLER.png'
+import mid from './MID.png'
+import bot from './BOT.png'
+import sup from './SUPPORT.png'
 
 export default function StepOne({ set }) {
 
     const {
         price, setPrice,
         days, setDays,
+        champs, setChamps,
+        lanes, setLanes,
         fromRank, setFromRank,
         toRank, setToRank,
         divFromRef, divToRef,
@@ -37,7 +43,8 @@ export default function StepOne({ set }) {
     const [from, setFrom] = useState(rank9)
     const [to, setTo] = useState(rank9)
     const [cont, setCont] = useState('hidden')
-    const [lanes, setLanes] = useState(false)
+    const [openLanes, setOpenLanes] = useState(false)
+    const [openChamps, setOpenChamps] = useState(false)
 
 
     useEffect(() => {
@@ -56,6 +63,12 @@ export default function StepOne({ set }) {
         if (price) setCont('visible')
         else setCont('hidden')
     }, [price])
+
+    useEffect(() => {
+        if (champs.length === 0) {
+            document.getElementById("checkChamps").checked = false
+        }
+    }, [champs])
 
     const handleFast = (e) => {
         fastRef.current = e.target.checked
@@ -234,10 +247,35 @@ export default function StepOne({ set }) {
     }
 
     const handleLanes = (e) => {
-        setLanes(e.target.checked)
+        if (e.target.checked === false) {
+            setLanes([])
+        }
+
+        setOpenLanes(true)
     }
 
+    const handleOpenChamps = (e) => {
+        if (e.target.checked === false) {
+            setChamps([])
+        }
 
+        setOpenChamps(true)
+
+    }
+
+    const getLaneImage = (role) => {
+        if (role === "TOP")
+            return top
+        else if (role === "JUNGLER")
+            return jungler
+        else if (role === "MID")
+            return mid
+        else if (role === "BOT")
+            return bot
+
+        return sup
+
+    }
 
 
     return (
@@ -380,13 +418,12 @@ export default function StepOne({ set }) {
                                 <i><img src="https://img.icons8.com/color/48/000000/league-of-legends.png"
                                     className="server-icon text-center" alt="" /></i>
                                 <p className="server-title"> Fijar campeones </p>
-                                <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" />
+                                <input type="checkbox" id="checkChamps" value="first_checkbox" className="checkbox" onChange={handleOpenChamps} />
+                                <ModalChamps openChamps={openChamps} setOpenChamps={setOpenChamps} setChamps={setChamps} champions={champs} lanes={lanes} />
                                 <div className="image-container">
-                                    <img src={example} className="image-champ" alt="" />
-                                    <img src={example} className="image-champ" alt="" />
-                                    <img src={example} className="image-champ" alt="" />
-                                    <img src={example} className="image-champ" alt="" />
-                                    <img src={example} className="image-champ" alt="" />
+                                    {
+                                        champs.map(champ => <img src={champ.img} className="image-champ" alt="" />)
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -395,15 +432,15 @@ export default function StepOne({ set }) {
                                 <i><img src="https://img.icons8.com/color/48/000000/league-of-legends.png"
                                     className="server-icon text-center" alt="" /></i>
                                 <p className="server-title"> Fijar roles </p>
-                                <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleLanes} />
-                                <ModalLanes lanes={lanes} setLanes={setLanes} />
+                                <input type="checkbox" id="checkLanes" value="first_checkbox" className="checkbox" onChange={handleLanes} />
+                                <ModalLanes openLanes={openLanes} setOpenLanes={setOpenLanes} setLanes={setLanes} lanes={lanes} />
+
+
                             </div>
                             <div className="image-container2">
-                                <img src={jungle} className="image-champ2" alt="" />
-                                <img src={jungle} className="image-champ2" alt="" />
-                                <img src={jungle} className="image-champ2" alt="" />
-                                <img src={jungle} className="image-champ2" alt="" />
-                                <img src={jungle} className="image-champ2" alt="" />
+                                {
+                                    lanes.map(role => <img key={role} src={getLaneImage(role)} alt={role} className="image-champ2" />)
+                                }
                             </div>
                         </div>
                         <div className="continue2" style={{ visibility: cont }} onClick={() => set(true)}>
@@ -416,3 +453,4 @@ export default function StepOne({ set }) {
 
     )
 }
+

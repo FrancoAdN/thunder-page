@@ -8,6 +8,8 @@ export default function StateProvider(props) {
     const [days, setDays] = useState(0)
     const [fromRank, setFromRank] = useState("Iron")
     const [toRank, setToRank] = useState("Iron")
+    const [champs, setChamps] = useState([])
+    const [lanes, setLanes] = useState([])
     const divFromRef = useRef()
     const divToRef = useRef()
     const serverRef = useRef()
@@ -37,6 +39,8 @@ export default function StateProvider(props) {
         days, setDays,
         fromRank, setFromRank,
         toRank, setToRank,
+        champs, setChamps,
+        lanes, setLanes,
         divFromRef, divToRef,
         serverRef, modeRef, fastRef,
         //STEP 2
