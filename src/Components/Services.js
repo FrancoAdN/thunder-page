@@ -21,12 +21,6 @@ export default function Services() {
                             <i>POPULAR</i>
                         </div>
                     </div>
-
-                    <div className="circle2">
-                        <div className="icon">
-                            <i>NUEVO</i>
-                        </div>
-                    </div>
                     <main className="page-content">
                         <div className="card-content">
                             <div className="content">

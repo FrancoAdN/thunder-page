@@ -1,11 +1,11 @@
 .main-section {
     font-family: "Raleway", sans-serif;
     position: absolute;
-    top: 80px;
-    left: 0px;
+    top: 150px;
+    left: 230px;
     width: 1200px;
     height: 620px;
-    background: #ffffff;
+    background: #fff;
     border-bottom-left-radius:60px;
     border-bottom-right-radius:60px;
     -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
@@ -15,11 +15,10 @@
 
 .header-section {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 1140px;
+    top: 70px;
+    width: 1200px;
     height: 80px;
-    left: 60px;
+    left: 230px;
     background: #d8d6d6;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
@@ -29,7 +28,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 1140px;
+    width: 1200px;
     height: 80px;
     background-color: #e9e8e8;
     border-top-left-radius: 60px;
@@ -250,7 +249,7 @@
 }
 
 .server {
-    margin-top: -54px;
+    margin-top: -37px;
     margin-left: 125px;
 }
 
@@ -275,7 +274,7 @@
 }
 
 .modo {
-    margin-top: -44px;
+    margin-top: -26px;
     margin-left: 125px;
 }
 
@@ -371,7 +370,7 @@
 .card7 {
     position: absolute;
     left: 260px;
-    top: 242px;
+    top: 195px;
     width: 250px;
     height: 50px;
     margin-left: 20px;
@@ -390,7 +389,7 @@
 .card8 {
     position: absolute;
     left: 260px;
-    top: 325px;
+    top: 290px;
     width: 250px;
     height: 50px;
     margin-left: 20px;
@@ -399,7 +398,7 @@
 }
 
 .image-container {
-    margin-top: -5px;
+    margin-top: 15px;
     margin-left: 15px;
     width: 220px;
     height: 30px;
@@ -427,7 +426,8 @@
 .info-card {
     width: 750px;
     height: 450px;
-    background: #ffffff;
+    background-color: #ffffff;
+    margin-top: 30px;
     margin-left: 35px;
     border-radius: 50px;
     -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
@@ -468,25 +468,25 @@
 
 .user {
     position: absolute;
-    top: 117px;
+    top: 123px;
     left: 295px;
 }
 
 .pass {
     position: absolute;
-    top: 117px;
+    top: 123px;
     left: 525px;
 }
 
 .cemail {
     position: absolute;
-    top: 176px;
+    top: 177px;
     left: 295px;
 }
 
 .ref {
     position: absolute;
-    top: 176px;
+    top: 177px;
     left: 525px;
 }
 
@@ -581,7 +581,6 @@
 .button-pay {
     font-size: 17px;
     font-weight: 500;
-    margin-top: 12px;
     color: #ffffff;
 }
 
