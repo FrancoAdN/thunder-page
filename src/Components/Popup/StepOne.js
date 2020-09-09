@@ -438,7 +438,7 @@ export default function StepOne({ set }) {
                                 }
                             </div>
                         </div>
-                        <div className="continue2" style={{ visibility: cont }} onClick={() => set(true)}>
+                        <div className="continue2" style={{ visibility: cont }} onClick={() => set("2")}>
                             <p className="cont text-center"> Continuar </p>
                         </div>
                     </div>

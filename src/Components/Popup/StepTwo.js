@@ -1,16 +1,13 @@
-import React, { useState, useEffect, useContext, useRef } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { prov } from './_useHook'
 import Header from './Header'
-// import './style2.css'
 import './step2.css'
-// import thunder from './thunder.png'
 import payments from './payments.png'
 import payments2 from './payments2.png'
 import brubank from './payments-img/brubank.png'
 import rapipago from './payments-img/rapipago.png'
 
-export default function StepTwo() {
-    const [cont, setCont] = useState('hidden')
+export default function StepTwo({ set }) {
 
     const [imgfrom, setImgfrom] = useState(require('./ranks-lol/9.png'))
     const [namefrom, setNamefrom] = useState('')
@@ -26,7 +23,6 @@ export default function StepTwo() {
         //step 2
         summoners, setSummoners, username, setUsername, password, setPassword,
         email, setEmail, cemail, setCemail, ref, setRef, message, setMessage,
-        fetchInformation
     } = useContext(prov)
 
     function romanize(num) {
@@ -37,12 +33,6 @@ export default function StepTwo() {
     }
 
     useEffect(() => {
-        // console.log(price, days, fromRank, toRank, divFromRef.current, divToRef.current)
-        // switch (fromRank) {
-        //     case 'Iron':
-        //         imgFrom.current = require('./ranks-lol/9.png')
-        //         break
-        // }
 
         divFromRef.current = romanize(divFromRef.current)
         divToRef.current = romanize(divToRef.current)
@@ -133,7 +123,7 @@ export default function StepTwo() {
 
     const formSubmit = (e) => {
         e.preventDefault()
-        console.log('submit')
+        set("3")
     }
 
     return (
