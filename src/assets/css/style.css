@@ -1393,9 +1393,13 @@ canvas {
   height: 25px;
 }
 
+/*-------------------------------------
+        Valorant Cards Section
+--------------------------------------*/
+
 
 .card2-circle{
-  text-align:center;
+   text-align:center;
    margin-top:50px;
    background:#27496D;    
    border:10px solid transparent;
@@ -1408,7 +1412,7 @@ canvas {
    box-shadow: 10px 10px 35px -2px rgba(0,0,0,1);
 }
 .card2-circle .card2-title{
-  font-weight:600;
+   font-weight:600;
    font-size:26px;
    margin-top: 70px;
 }
@@ -1440,7 +1444,7 @@ canvas {
 }
 
 .card2-circle .btn{
-  background:transparent;
+   background:transparent;
    border:1px solid #fff;
    text-transform:uppercase;
    padding:5px 30px;    
@@ -1464,29 +1468,11 @@ canvas {
  text-shadow: 0px -1px 10px #8261ee;
   transform:scale(1.2)rotate(20deg);
 }
-@media only screen and (min-width: 1200px) {
-   .card2-circle:nth-child(3){
-       margin-left:-40px;
-       z-index:0;
-  }
-   .card2-circle{
-       width:390px;
-       height:390px;
-  }
-   .card2-circle:nth-child(2){
-       margin-left:-20px;
-       box-shadow: 1px 2px 20px 8px rgba(241, 235, 235, 0.12);
-       transform: scale(1.2);
-       z-index:1;
-  }
- .card2-circle .card2-icon i{
-    margin-top: 20px;
-   }
-}
+
 @media only screen and (min-width: 991px) and (max-width: 1200px) {
  .card2-circle{
-       width:340px;
-       height:340px;
+   width:330px;
+   height:340px;
   }
 .card2-circle .card2-icon i{
    font-size:50px;
@@ -1501,5 +1487,345 @@ canvas {
  .card2-circle:nth-child(2){
        margin-left:-20px;
        z-index:1;
+  }
+}
+
+/*--------------------------------------
+        Responsive desing
+----------------------------------------*/
+
+@media (max-width:1718px) {
+  .wave {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (min-width:1500px) {
+  .wave {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.circle {
+  display: none;
+}
+
+@media (max-width:1440px) {
+  .circle {
+      position: absolute;
+      left: 90px;
+      display: block;
+  }
+}
+
+@media (max-width:1280px) {
+  .circle {
+      position: absolute;
+      left: 10px;
+      display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .card2-circle:nth-child(3){
+      margin-left:-40px;
+      z-index:0;
+ }
+  .card2-circle{
+      width:390px;
+      height:390px;
+ }
+  .card2-circle:nth-child(2){
+      margin-left:-20px;
+      box-shadow: 1px 2px 20px 8px rgba(241, 235, 235, 0.12);
+      transform: scale(1.2);
+      z-index:1;
+ }
+.card2-circle .card2-icon i{
+   margin-top: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .item-test-2 {
+    height: 290px;
+  }
+  .circle {
+      position: absolute;
+      left: -85px;
+      display: block;
+  }
+  .vid-post {
+    width: 450px;
+  }
+  .step-test-1 {
+    height: 300px;
+  }
+}
+
+@media (min-width:801px) and (max-width:991px) {
+   .item-test-1{
+    height: 290px;
+  }
+  .item-test-3 {
+    position: relative;
+    left: 170px;
+  }
+  .vid-post {
+    margin-left: 100px;
+  }
+  .circle {
+    display: none;
+  }
+  .page-content .copy {
+    display: none;
+  }
+  .step {
+    width: 280px;
+  } 
+  .step h3,p {
+    margin-left: -20px;
+  }
+  .card2-circle {
+    width: 250px;
+  }
+}
+
+@media (min-width: 769px) and (max-width:800px) {
+  .welcome-area .header-text h1 {
+    position: relative;
+    top: -150px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 1.4px;
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  .welcome-area .header-text p {
+    position: relative;
+    top: -130px;
+    font-weight: 400;
+    font-size: 25px;
+    color: #fff;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .features-small-item {
+    margin-top: -50px;
+  }
+  .item-test-1 {
+    height: 290px;
+  }
+  .item-test-3 {
+    position: relative;
+    left: 200px;
+  }
+  .vid-post {
+      margin-left: 50px;
+      width: 600px;
+  }
+  .circle {
+      position: absolute;
+      left: -150px;
+      display: block;
+  }
+  .card-content .copy {
+    display: none;
+  }
+  .card-content .title {
+    position: relative;
+    top: -40px;
+  }
+  .card2-circle {
+    width: 400px;
+    height: 420px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+  .step {
+    margin-left: -20px;
+    width: 260px;
+  }
+  .step h3 {
+    margin-left: -20px;
+    font-size: 20px;
+  }
+  .step p {
+    margin-left: -20px;
+  }
+  .step-test-1 {
+    height: 282px;
+  }
+}
+
+@media (min-width: 700px) and (max-width:768px) {
+  .circle {
+      position: absolute;
+      left: 5px;
+      display: block;
+  }
+  .vid-post {
+    margin-left: 5px;
+    width: 700px;
+  }
+  .card2-circle {
+    width: 400px;
+    height: 420px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 160px;
+  }
+  .step {
+    margin-left: -25px;
+    width: 260px;
+  }
+  .step h3 {
+    margin-left: -20px;
+    font-size: 20px;
+  }
+  .step p {
+    margin-left: -20px;
+  }
+  .features-small-item {
+    position: relative;
+    top: -100px;
+  }
+   .item-test-3 {
+    position: relative;
+    left: 180px;
+  }
+}
+
+@media (max-width: 540px) {
+  .vid-post {
+      margin-left: -15px;
+      width: 540px;
+  }
+  .circle {
+      position: absolute;
+      left: 140px;
+      display: block;
+  }
+  .card2-circle{
+    width:400px;
+    height: 340px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+  }
+}
+
+@media (min-width:400px) and (max-width:414px){
+  .vid-post {
+      margin-left: -10px;
+      width: 400px;
+  }
+  .circle {
+      position: absolute;
+      left: 15px;
+      display: block;
+  }
+  .card2-circle{
+    width: 100%;
+    height: 340px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+  .card2-title {
+    position: relative;
+    top: -70px;
+  }
+  .card2-text {
+    position: relative;
+    top: -50px;
+  }
+  .card2-body button {
+    position: relative;
+    top: -65px;
+  }
+}
+
+@media (max-width: 375px) {
+  .vid-post {
+      margin-left: -15px;
+      width: 375px;
+  }
+  .circle {
+      position: absolute;
+      left: -20px;
+      display: block;
+  }
+  .card2-circle{
+    width: 100%;
+    height: 340px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+  .card2-title {
+    position: relative;
+    top: -70px;
+  }
+  .card2-text {
+    position: relative;
+    top: -50px;
+  }
+  .card2-body button {
+    position: relative;
+    top: -65px;
+  }
+}
+
+@media (max-width:360px) {
+  .vid-post {
+      margin-left: -15px;
+      width: 360px;
+  }
+  .circle {
+      position: absolute;
+      left: -30px;
+      display: block;
+  }
+  .card2-circle{
+    width: 100%;
+    height: 340px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+  .card2-title {
+    position: relative;
+    top: -70px;
+  }
+  .card2-text {
+    position: relative;
+    top: -50px;
+  }
+  .card2-body button {
+    position: relative;
+    top: -65px;
+  }
+}
+
+@media (max-width:320px) {
+  .vid-post {
+      margin-left: -15px;
+      width: 320px;
+  }
+  .circle {
+      position: absolute;
+      left: -75px;
+      display: block;
+  }
+  .card2-circle{
+    width: 100%;
+    height: 420px;
+    margin-bottom: 10px;
+    border-radius:20%;
+    margin-top: 0px;
   }
 }

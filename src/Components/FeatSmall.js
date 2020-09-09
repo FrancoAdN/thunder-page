@@ -11,7 +11,7 @@ export default function FeatSmall() {
                             {/* <!-- ***** Features Small Item Start ***** --> */}
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12"
                                 data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
-                                <div className="features-small-item">
+                                <div className="features-small-item item-test-1">
                                     <div className="icon">
                                         <i><img src={thundericon} className="thunder-icon" alt="icon" /></i>
                                     </div>
@@ -24,7 +24,7 @@ export default function FeatSmall() {
                             {/* <!-- ***** Features Small Item Start ***** --> */}
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12"
                                 data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
-                                <div className="features-small-item">
+                                <div className="features-small-item item-test-2">
                                     <div className="icon">
                                         <i><img src="https://img.icons8.com/fluent/48/000000/exercise.png" alt="exercise" /></i>
                                     </div>
@@ -37,7 +37,7 @@ export default function FeatSmall() {
                             {/* <!-- ***** Features Small Item Start ***** --> */}
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12"
                                 data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
-                                <div className="features-small-item">
+                                <div className="features-small-item item-test-3">
                                     <div className="icon">
                                         <i><img src="https://img.icons8.com/fluent/48/000000/guarantee.png" alt="guarantee" /></i>
                                     </div>

@@ -312,7 +312,7 @@
 }
 
 .server {
-    margin-top: -54px;
+    margin-top: -30px;
     margin-left: 125px;
 }
 
@@ -398,6 +398,7 @@
 .price-b {
     margin-left: 250px;
     margin-top: -10px;
+    margin-bottom: 10px;
     font-size: 14px;
     font-weight: 600;
     color: #b8b9b8;

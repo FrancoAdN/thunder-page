@@ -18,7 +18,7 @@ export default function Valorant() {
                     <div className="container">
                         <div className="row">
                             {/* <!-- card1 --> */}
-                            <div className="card2 card2-circle">
+                            <div className="card2-circle">
                                 <div className="card2-icon">
                                     <i className="fas fa-apple-alt"></i>
                                 </div>
@@ -30,7 +30,7 @@ export default function Valorant() {
                                 </div>
                             </div>
                             {/* <!-- card2 --> */}
-                            <div className="card2 card2-circle">
+                            <div className=" card2-circle">
                                 <div className="card2-icon">
                                     <i className="fas fa-cookie"></i>
                                 </div>
@@ -42,7 +42,7 @@ export default function Valorant() {
                                 </div>
                             </div>
                             {/* <!-- card3 --> */}
-                            <div className="card2 card2-circle ">
+                            <div className=" card2-circle ">
                                 <div className="card2-icon">
                                     <i className="fas fa-carrot"></i>
                                 </div>

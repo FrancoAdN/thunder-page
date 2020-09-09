@@ -9,7 +9,7 @@ export default function Process() {
                 </div>
                 <div className="row">
                     <div className="col-md-4">
-                        <div className="step">
+                        <div className="step step-test-1">
                             <span className="number">01</span>
                             <h3>Contratas nuestro servicio</h3>
                             <p> Elegis el tipo de boosting que deseas, realizas el pago y nosotros nos pondremos en contacto
