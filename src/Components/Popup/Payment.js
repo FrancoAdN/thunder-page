@@ -200,7 +200,7 @@ export default function Payment() {
                 <div>
                     <input type="hidden" name="transactionAmount" id="transactionAmount" value={price} />
                     <input type="hidden" name="paymentMethodId" id="paymentMethodId" />
-                    <input type="hidden" name="description" id="description" />
+                    <input type="hidden" name="description" id="description" value="Thunder boosting" />
                     <br />
                     <button type="submit">Pagar</button>
                     <br />

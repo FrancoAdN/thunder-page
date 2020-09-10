@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Services() {
     return (
@@ -27,7 +28,9 @@ export default function Services() {
                                 <h2 className="title">Boosting Solo/Duo Queue</h2>
                                 <p className="copy">Solo tienes que elegir la liga en la que quieres estar y el resto lo hacemos
                                 nosotros.</p>
-                                <button className="btn"> ¡Contratar! </button>
+                                <Link to={"/boost"}>
+                                    <button className="btn"> ¡Contratar! </button>
+                                </Link>
                             </div>
                         </div>
                         <div className="card-content">
@@ -35,7 +38,9 @@ export default function Services() {
                                 <h2 className="title">Boost Solo/Duo Promotion</h2>
                                 <p className="copy"> Si te encuentras a solo un paso de avanzar de liga, esta asegura la
                                 victoria de su promocion. </p>
-                                <button className="btn" onClick={() => { }}> ¡Contratar! </button>
+                                <Link to={"/boost"}>
+                                    <button className="btn"> ¡Contratar! </button>
+                                </Link>
                             </div>
                         </div>
                         <div className="card-content">
@@ -43,7 +48,10 @@ export default function Services() {
                                 <h2 className="title">Boost Solo/Duo Victory Wins</h2>
                                 <p className="copy"> Si lo que necesitas es solo acumular una cantidad de victorias, esta opción
                                 es para ti!</p>
-                                <button className="btn" onClick={() => { }}> ¡Contratar! </button>
+                                <Link to={"/boost"}>
+                                    <button className="btn"> ¡Contratar! </button>
+                                </Link>
+
                             </div>
                         </div>
                         <div className="card-content">
@@ -51,7 +59,10 @@ export default function Services() {
                                 <h2 className="title">Boosting Flex (5v5) Queue</h2>
                                 <p className="copy"> Solo tienes que elegir la liga en la que quieres estar y el resto lo
                                 hacemos nosotros. </p>
-                                <button className="btn" onClick={() => { }}> ¡Contratar! </button>
+                                <Link to={"/boost"}>
+                                    <button className="btn"> ¡Contratar! </button>
+                                </Link>
+
                             </div>
                         </div>
                     </main>
