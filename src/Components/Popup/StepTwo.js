@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { prov } from './_useHook'
 import Header from './Header'
-import './step2.css'
+import './style.css'
+import './responsive.css'
 import payments from './payments.png'
 import payments2 from './payments2.png'
 import brubank from './payments-img/brubank.png'
@@ -127,82 +128,90 @@ export default function StepTwo({ set }) {
     }
 
     return (
-        <div className="form-popup">
-            <div className="container form-wrapper">
-                <Header title="2. PAGOS E INFORMACIÓN" />
 
-                <form className="main-section" onSubmit={formSubmit}>
-                    <div className="main-section-head">
-                        <h1 className="title text-center"> DATOS DE CONTACTO </h1>
-                        <p className="sub-title text-center"> Completa los siguientes campos para poder empezar tu orden.
-                        <br /> Te estaremos contactando en el proceso. </p>
-                    </div>
-                    <div className="info-card">
-                        <div className="info-container">
-                            <div className="name">
-                                <label > Nombre del invocador </label> <br /> <input required type="text" value={summoners} onChange={(e) => setSummoners(e.target.value)} />
-                            </div>
-                            <div className="user">
-                                <label > Usuario </label> <br /> <input required type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-                            </div>
-                            <div className="pass">
-                                <label > Contraseña </label> <br /> <input required type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
-                            </div>
-                            <div className="email">
-                                <label className="" > Email </label> <br /> <input required className="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                            </div>
-                            <div className="cemail">
-                                <label className="" > Confirmar email </label> <br /> <input required className="email" type="email" value={cemail} onChange={(e) => setCemail(e.target.value)} />
-                            </div>
-                            <div className="ref">
-                                <label className="" > Referido </label> <br /> <input required className="email" type="text" value={ref} onChange={(e) => setRef(e.target.value)} />
-                            </div>
-                            <div className="contact">
-                                <label > Mensaje de contacto (Opcional) </label> <br /> <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} />
-                            </div>
-                            <p className="opc-pago"> OPCIONES DE PAGO </p>
-                            <hr />
-                            <img alt="" className="payments" src={payments} />
-                            <img alt="" className="payments2" src={payments2} />
-                            <img alt="" className="brubank" src={brubank} />
-                            <img alt="" className="rapipago" src={rapipago} />
+        <section id="steptwo">
+            <div id="card4" class="card4"> 
+                <div class="title">
+                    <h1> <span> Completar </span> con <span > sus </span> datos </h1>
+                    <p> Si tienes alguna duda sobre nuestro servicio, no dudes en contactarnos por <span> <a href="https://discord.gg/CrxGDbF"> Discord.</a> </span>
+                    <br/> Gracias por confiar en nosotros ;)
+                    </p>
+                 </div>
+                    <div class="form-container">
+                        <div class="user">
+                            <label > Nombre de invocador </label> <br /> <input required type="text"/>
+                        </div>
+                        <div class>
+                            <label > Usuario </label> <br /> <input required type="text"/>
+                        </div>
+                        <div class>
+                            <label > Contraseña </label> <br /> <input required type="text"/>
+                        </div>
+                        <div class>
+                            <label className="" > Email </label> <br /> <input required className="email"/>
+                        </div>
+                        <div class>
+                            <label className="" > Confirmar email </label> <br /> <input required className="email" type="email"/>
+                        </div>
+                        <div class>
+                            <label className="" > Referido </label> <br /> <input required className="email" type="text"/>
+                        </div>
+                        <div class="">
+                            <label> Mensaje de contacto (Opcional) </label> <br /> <textarea type="text" class="form"></textarea>
                         </div>
                     </div>
-                    <div className="card9">
-                        <p className="card-title2"> DETALLES </p>
-                        <hr />
-                        <div className="info-rank">
-                            <div className="actual">
-                                <p className="info-rank-p text-center"> DESDE </p>
-                                <p className="text-center"> {namefrom} </p>
-                                <img alt="" className="" src={imgfrom} />
-                            </div>
-                            <div className="proximo">
-                                <p className="info-rank-p text-center"> HASTA </p>
-                                <p className="text-center"> {nameto} </p>
-                                <img alt="" className="" src={imgto} />
-                            </div>
+                    <div class="payment-metod">
+                        <div class="title">
+                            <h1> Elija su forma de pago </h1>
+                            <p> Si no encuentra su metodo de pago disponible, consultenos por el mismo a traves de <span> <a href="https://discord.gg/CrxGDbF"> Discord.</a> </span>                    </p>
                         </div>
-                        <hr />
-                        <div className="price">
-                            <p className="price-a"> PRECIO TOTAL </p>
-                            {/* <p className="price-b"> <del> ${price + (price * 0.2)} ARS </del> </p> */}
-                            {price ? <p className="price-b"> <del> ${price + (price * 0.2)} ARS </del> </p> : <p></p>}
-                            <p className="price-c"> ${price} ARS </p>
-                            <hr />
-                            <div className="time">
-                                <p className="time-a"> TIEMPO <br /> ESTIMADO </p>
-                                <p className="time-b"> {days} DÍAS</p>
-                            </div>
-
-                            <button className="pay" type="submit">
-                                <p className="button-pay text-center"> CONFIRMAR </p>
-                            </button>
-
+                        <div class="payment-options">
+                            <input type="radio" id="male" name="gender" value=""/>
+                            <label for="male"> Mercado pago (Tarjeta de debito o credito / Efectivo)</label><br/>
+                            <input type="radio" id="female" name="gender" value=""/>
+                            <label for="female"> Transferencia bancaria por CVU (6% de descuento en el pago)</label><br/>
+                            <input type="radio" id="male" name="gender" value="male"/>
+                            <label for="male"> Paypal (6% de descuento en el pago) </label><br/>
+                            <input type="radio" id="other" name="gender" value="other"/>
+                            <label for="other">Otro (Consultar por su medio de pago disponible)</label>
                         </div>
                     </div>
-                </form>
-            </div>
-        </div>
+                </div>
+
+                <div id="card5" class="card5">
+                    <div class="title">
+                        <h1> Resumen de compra </h1>
+                        <hr/>
+                    </div>
+                    <div class="resume">
+                        <img src="./img/1.png" class="rank"/> { /* Aca va la imagen de los rank */ }
+                        <img src="./img/1.png" class="rank"/> { /* Aca va la imagen de los rank */ }
+                        <p class="rank-status"> Desde Iron I hasta Silver IV </p>
+                        <hr/>
+                    </div>
+                    <div class="payment-info">
+                        <div class="price">
+                            <a class="padd"> Precio final </a>
+                            <p class="old"> $0000 </p>
+                            <p class="now"> $1111 </p>
+                            <hr/>
+                        </div>
+                        <div class="time">
+                            <a class="padd"> Tiempo total </a>
+                            <p class="count"> 0 </p>
+                            <p> Dias </p>
+                            <hr/>
+                            <p> <img src="./img/verify.png" class="icon"/> Soporte al cliente 24/7 </p> { /* Aca va la imagen verify */ }
+                            <p> <img src="./img/verify.png" class="icon"/> Acceso a beneficios exclusivos </p> { /* Aca va la imagen verify */ }
+                            <p> <img src="./img/verify.png" class="icon"/> Servicios adicionales incluidos </p> { /* Aca va la imagen verify */ }
+                        </div>
+                        <button> Pagar </button>
+                        <div class="dude"> 
+                            <p> Ante cualquier duda con tu pago, contactanos a <a href="https://discord.gg/CrxGDbF"> Discord.</a> </p>
+                        </div>
+                    </div>
+                </div>
+         </section>
+
     )
 }

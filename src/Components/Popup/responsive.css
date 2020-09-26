@@ -1,1939 +1,645 @@
-/* --------------- MEDIA SCREEN 1024 ----------------- */
-
-@media screen and (width:1024px) {
-.form {
-    top: 0em;
-    width: 1024px;
-    height: 620px;
-    left: 0;
-    right: 0;
-    background: white;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    border-bottom-right-radius:60px;
-    border-bottom-left-radius:60px;
-}
-
-.main-section {
-    font-family: "Raleway", sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 0px;
-    width: 1024px;
-    height: 620px;
-    background: #ffffff;
-    border-bottom-left-radius:60px;
-    border-bottom-right-radius:60px;
-    -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-}
-
-.header-section {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1024px;
-    height: 80px;
-    background: #d8d6d6;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-}
-
-.header-section p {
-    font-size: 20px;
-    line-height: 1em;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-left: -30px;
-    margin-top: 30px;
-}
-
-.division {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 1024px;
-    height: 80px;
-    background-color: #e9e8e8;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    border-style: hidden hidden solid hidden;
-    border-color: #cccccc;
-}
-
-.division:hover {
-    background: #ffffff;
-    border-style: solid hidden hidden hidden;
-    border-color: #f00fdd;
-    border-width: 3px;
-}
-
-.division2 {
-    position: absolute;
-    top: 0px;
-    left: 400px;
-    width: 400px;
-    height: 80px;
-    background-color: #e9e8e8;
-    border-style: hidden hidden solid hidden;
-    border-color: #cccccc;
-}
-
-.division2:hover {
-    background: #ffffff;
-    border-style: solid hidden hidden hidden;
-    border-color: #f00fdd;
-    border-width: 3px;
-}
-
-.division3 {
-    position: absolute;
-    top: 0px;
-    left: 800px;
-    width: 400px;
-    height: 80px;
-    background-color: #e9e8e8;
-    border-top-right-radius: 60px;
-    border-style: hidden hidden solid hidden;
-    border-color: #cccccc;
-}
-
-.division3:hover {
-    background: #ffffff;
-    border-style: solid hidden hidden hidden;
-    border-color: #f00fdd;
-    border-width: 3px;
-}
-
-.main-section h1 {
-    font-size: 26px;
-    margin-top: 20px;
-
-}
-
-
-.sub-title {
-    line-height: 1em;
-    font-weight: 500;
-}
-
-.card {
-    width: 500px;
-    height: 200px;
-    background: #ffffff;
-    margin-left: 10px;
-    margin-top: 30px;
-    border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-}
-
-.card2 {
-    position: absolute;
-    top: 335px;
-    width: 500px;
-    height: 200px;
-    background: #ffffff;
-    margin-left: 10px;
-    border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-}
-
-.card-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 100px;
-}
-
-.img-fluid {
-    position: absolute;
-    left: 50px;
-    top: 22px;
-    width: 35px;
-    height: 35px;
-}
-
-.img-fluid2 {
-    position: absolute;
-    left: 0px;
-    top: 24px;
-    width: 30px;
-    height: 30px;
-}
-
-.img-fluid3 {
-    position: absolute;
-    left: 0px;
-    top: 24px;
-    width: 30px;
-    height: 30px;
-}
-
-.img-fluid4 {
-    position: absolute;
-    left: 15px;
-    top: 10px;
-    width: 160px;
-    height: 170px;
-}
-
-.rank {
-    position: absolute;
-    left: 185px;
-    top: 40px;
-    width: 300px;
-    height: 50px;
-    background: #f1f0f0;
-    border-radius: 50px;
-
-}
-
-.rank select {
-    position: absolute;
-    left: 15px;
-    background: #f1f0f0;
-    width: 280px;
-    height: 50px;
-    border-radius: 50px;
-    font-size: 18px;
-    border: none;
-}
-
-.divition select{
-    position: absolute;
-    left: 15px;
-    background: #f1f0f0;
-    width: 280px;
-    height: 50px;
-    border-radius: 50px;
-    font-size: 18px;
-    border: none;
-}
-
-.divition {
-    position: absolute;
-    left: 185px;
-    top: 95px;
-    width: 300px;
-    height: 50px;
-    background: #ececec;
-    border-radius: 50px;
-}
-
-.status-lp {
-    position: absolute;
-    top: 150px;
-    left: 235px;
-    width: 200px;
-    height: 30px;
-    border-radius: 50px;
-    background: #ececec;
-    border: none;
-}
-
-.status-lp select {
-    width: 200px;
-    height: 30px;
-    background: #ececec;
-    border-radius: 50px;
-    border: none;
-}
-
-.continue {
-    position: absolute;
-    left: 260px;
-    top: 430px;
-    width: 200px;
-    height: 50px;
-    font-size: 12px;
-    border-radius: 20px;
-    background-color: #ff589e;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 0.25px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-}
-
-.continue:hover {
-    background-color: rgb(218, 49, 218);
-    -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-}
-
-.cont {
-    font-size: 17px;
-    font-weight: 500;
-    margin-top: 12px;
-    color: #ffffff;
-}
-
-/* --- CARD ---- 3 */
-
-.card3 {
-    width: 200px;
-    height: 50px;
-    margin-top: -10px;
-    margin-left: 20px;
-    background: #ffffff;
-    border-radius: 50px;
-}
-
-.server-icon {
-    margin-top: 10px;
-    margin-left: 15px;
-    width: 32px;
-    height: 32px;
-}
-
-.server-title {
-    color: #000;
-    margin-top: -28px;
-    margin-left: 60px;
-}
-
-.server {
-    margin-top: -54px;
-    margin-left: 125px;
-}
-
-.server select {
-    margin-left: 5px;
-    width: 80px;
-    height: 50px;
-    border-radius: 50px;
-    background: #ffffff;
-    border: none;
-}
-
-/* --- CARD ---- 4 */
-
-.card4 {
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-    background: #ffffff;
-    border-radius: 50px;
-
-}
-
-.modo {
-    margin-top: -44px;
-    margin-left: 125px;
-}
-
-.modo select {
-    margin-left: 5px;
-    width: 80px;
-    height: 30px;
-    border-radius: 50px;
-    background: #ffffff;
-    border: none;
-}
-
-
-/* --- CARD ---- 5 */
-
-.card5 {
-    position: absolute;
-    left: 0px;
-    top: 340px;
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-    background: #ffffff;
-    border-radius: 50px;
-}
-
-
-/* --- CARD 6 --- */
-
-.card6 {
-    position: absolute;
-    top: 120px;
-    left: 520px;
-    width: 490px;
-    height: 415px;
-    background: #ffffff;
-    border-radius: 50px;
-    -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-}
-
-.card-title2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 210px;
-    margin-top: 10px;
-}
-
-.card6 hr {
-    width: 350px;
-}
-
-.price-a {
-    margin-left: 40px;
-    margin-top: -10px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.price-b {
-    margin-left: 215px;
-    margin-top: -10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #b8b9b8;
-}
-
-.price-c {
-    margin-left: 190px;
-    margin-top: -15px;
-    font-size: 22px;
-    font-weight: 600;
-    color: #a82cda;
-}
-
-.time-a {
-    margin-left: 40px;
-    margin-top: 0px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.time-b {
-    margin-left: 210px;
-    margin-top: -50px;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-/* --- CARD 7 --- */
-
-.card7 {
-    position: absolute;
-    left: 215px;
-    top: 242px;
-    width: 250px;
-    height: 50px;
-    margin-left: 20px;
-    background: #ffffff;
-    border-radius: 50px;
-}
-
-.checkbox {
-    position: absolute;
-    left: 195px;
-    top: 15px;
-    height: 20px;
-    width: 20px;
-}
-
-.card8 {
-    position: absolute;
-    left: 215px;
-    top: 325px;
-    width: 250px;
-    height: 50px;
-    margin-left: 20px;
-    background: #ffffff;
-    border-radius: 50px;
-}
-
-.image-container {
-    margin-top: -5px;
-    margin-left: 15px;
-    width: 220px;
-    height: 30px;
-}
-
-.image-champ {
-    width: 35px;
-    height: 35px;
-    margin-top: -5px
-}
-
-.image-container2 {
-    margin-top: 25px;
-    margin-left: 10px;
-    width: 220px;
-    height: 30px;
-}
-
-.image-champ2 {
-    margin-top: -35px;
-    width: 35px;
-    height: 35px;
-}
-
-}
-
-/* --------------- MEDIA SCREEN 414 ----------------- */
-
-@media screen and (max-width:414px){
-    .form {
-        top: 1px;
-        width: 414px;
-    }
-    
-    .main-section {
-        font-family: "Raleway", sans-serif;
-        position: absolute;
-        top: 80px;
-        left: 0px;
-        width: 414px;
-        height: 1550px;
-        background: #ffffff;
-    }
-    
-    .header-section {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 414px;
-        height: 80px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-    }
-    .header-section p {
-        font-size: 20px;
-        line-height: 1em;
-        font-weight: 500;
-        margin-top: 10px;
-        margin-left: -30px;
-        margin-top: 30px;
-    }
-    
-    .division {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 414px;
-        height: 80px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        background-color: #b9b9b9;
-        border-style: hidden hidden solid hidden;
-        border-color: #cccccc;
-    }
-    
-    .division:hover {
-        background: #ffffff;
-        border-style: solid hidden hidden hidden;
-        border-color: #f00fdd;
-        border-width: 3px;
-    }
-    
-    .main-section h1 {
-        font-size: 26px;
+/*
+------------------------------------------------
+        First Step Card Section
+------------------------------------------------
+*/
+
+@media (min-width:992px) and (max-width:1199px){
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "card1 card3"
+        "card1 card3"
+        "card2 card3"
+        "card2 card3";
+        grid-template-rows: 300px 300px; 
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
         margin-top: 20px;
-    
-    }
-    
-    .sub-title {
-        line-height: 1em;
-        font-weight: 500;
-    }
-    
-    .card {
-        width: 345px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 40px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    }
-    
-    .card-container {
-        width: 345px;
-        height: 200px;
-    }
-    
-    
-    .card2 {
-        position: absolute;
-        top: 480px;
-        width: 345px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 40px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    }
-    
-    .card2-container {
-        width: 345px;
-        height: 360px;
-    }
-    
-    
-    .card-title {
-        font-size: 20px;
-        font-weight: 600;
         margin-left: 10px;
-    }
-    
-    
-    .img-fluid {
-        position: absolute;
-        left: 50px;
-        top: 22px;
-        width: 35px;
-        height: 35px;
-    }
-    
-    .img-fluid2 {
-        position: absolute;
-        left: 0px;
-        top: 24px;
-        width: 30px;
-        height: 30px;
-    }
-    
-    .img-fluid3 {
-        position: absolute;
-        left: 0px;
-        top: 24px;
-        width: 30px;
-        height: 30px;
-    }
-    
-    .img-fluid4 {
-        position: absolute;
-        left: 100px;
-        top: 20px;
-        width: 160px;
-        height: 170px;
-    }
-    
-    .rank {
-        position: absolute;
-        left: 20px;
-        top: 200px;
+        margin-bottom: 20px;
+     }
+     .card1 .form {
+        position: relative;
+        left: 5px;
         width: 300px;
-        height: 50px;
-        background: #f1f0f0;
-        border-radius: 50px;
-    
+        height: 600px;
+     }
+     .card1 .form .img-rank {
+        width: 330px;
+        margin-left: 80px;
+     }
+     .card1 .form .img-rank .division {
+        margin-left: 70px;
+        margin-top: 40px;
     }
-    
-    .rank select {
-        position: absolute;
-        left: 15px;
-        background: #f1f0f0;
-        width: 280px;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 18px;
-        border: none;
-    }
-    
-    .divition select{
-        position: absolute;
-        left: 15px;
-        background: #f1f0f0;
-        width: 280px;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 18px;
-        border: none;
-    }
-    
-    .divition {
-        position: absolute;
-        left: 20px;
-        top: 255px;
-        width: 300px;
-        height: 50px;
-        background: #ececec;
-        border-radius: 50px;
-    }
-    
-    .status-lp {
-        position: absolute;
-        top: 315px;
-        left: 80px;
-        width: 200px;
-        height: 30px;
-        border-radius: 50px;
-        background: #ececec;
-        border: none;
-    }
-    
-    .status-lp select {
-        width: 200px;
-        height: 30px;
-        background: #ececec;
-        border-radius: 50px;
-        border: none;
-    }
-    
-    .continue {
-        position: absolute;
+     .card1 .form .container-rank {
+        position: relative;
+        top: 10px;
         left: 70px;
-        top: 570px;
-        width: 200px;
+        width: 300px;
+        height: 300px ;
+    }
+    .card1 .form .container-rank select {
+        position: relative;
+        left: 25px;
+        top: 60px;
+        width: 300px;
         height: 50px;
-        font-size: 12px;
-        border-radius: 20px;
-        background-color: #ff589e;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: 0.25px;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
     }
-    
-    .continue:hover {
-        background-color: rgb(218, 49, 218);
-        -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
+    .card2 {
+        height: 500px;
     }
-    
-    .cont {
-        font-size: 17px;
-        font-weight: 500;
-        margin-top: 12px;
-        color: #ffffff;
+    .card2 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 500px;
+     }
+     .card2 .form .img-rank {
+         width: 330px;
+         margin-left: 80px;
+     }
+     .card2 .form .img-rank .division {
+        margin-left: 70px;
     }
-    
-    /* --- CARD ---- 3 */
-    
-    .card3 {
-        width: 250px;
+     .card2 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: 70px;
+        width: 300px;
+        height: 200px ;
+    }
+    .card2 .form .container-rank select {
+        position: relative;
+        left: 20px ;
+        top: 40px ;
+        width: 300px;
         height: 50px;
-        margin-top: -10px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card3 .configuration {
+        position: relative;
+        left: 120px;
+    }
+    .card3 .test {
+        position: relative;
+        left: -180px;
+        top: 520px;
+    }
+}
+
+@media (min-width:900px) and (max-width:991px){
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "card1 card3"
+        "card1 card3"
+        "card2 card3"
+        "card2 card3";
+        grid-template-rows: 300px 300px; 
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+     }
+     .card1 .form {
+        position: relative;
+        left: 5px;
+        width: 300px;
+        height: 600px;
+     }
+     .card1 .form .img-rank {
+        width: 330px;
         margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
+     }
+     .card1 .form .img-rank .division {
+        margin-left: 70px;
+        margin-top: 40px;
     }
-    
-    .server-icon {
-        margin-top: 10px;
-        margin-left: 15px;
-        width: 32px;
-        height: 32px;
-    }
-    
-    .server-title {
-        color: #000;
-        margin-top: -28px;
-        margin-left: 60px;
-    }
-    
-    .server {
-        margin-top: -54px;
-        margin-left: 125px;
-    }
-    
-    .server select {
-        margin-left: 5px;
-        width: 120px;
-        height: 50px;
-        border-radius: 50px;
-        background: #ffffff;
-        border: none;
-    }
-    
-    /* --- CARD ---- 4 */
-    
-    .card4 {
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    
-    }
-    
-    .modo {
-        margin-top: -44px;
-        margin-left: 125px;
-    }
-    
-    .modo select {
-        margin-left: 5px;
-        width: 120px;
-        height: 30px;
-        border-radius: 50px;
-        background: #ffffff;
-        border: none;
-    }
-    
-    
-    /* --- CARD ---- 5 */
-    
-    .card5 {
-        position: absolute;
-        left: 0px;
-        top: 340px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    
-    /* --- CARD 6 --- */
-    
-    .card6 {
-        position: absolute;
-        top: 880px;
-        width: 345px;
-        height: 650px;
+     .card1 .form .container-rank {
+        position: relative;
+        top: 10px;
         left: 40px;
-        background: #ffffff;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+        width: 300px;
+        height: 300px ;
     }
-    
-    .card-title2 {
-        font-size: 20px;
-        font-weight: 600;
-        margin-left: 140px;
-        margin-top: 10px;
-    }
-    
-    .card6 hr {
-        width: 250px;
-    }
-    
-    .price-a {
-        margin-left: 40px;
-        margin-top: -10px;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .price-b {
-        margin-left: 140px;
-        margin-top: -10px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #b8b9b8;
-    }
-    
-    .price-c {
-        margin-left: 120px;
-        margin-top: -15px;
-        font-size: 22px;
-        font-weight: 600;
-        color: #a82cda;
-    }
-    
-    .time-a {
-        margin-left: 40px;
-        margin-top: 0px;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .time-b {
-        margin-left: 140px;
-        margin-top: -50px;
-        font-size: 22px;
-        font-weight: 600;
-    }
-    
-    /* --- CARD 7 --- */
-    
-    .card7 {
-        position: absolute;
-        top: 390px;
-        left: 0px;
-        width: 250px;
+    .card1 .form .container-rank select {
+        position: relative;
+        left: 25px;
+        top: 60px;
+        width: 300px;
         height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    .checkbox {
-        position: absolute;
-        left: 195px;
-        top: 15px;
-        height: 20px;
-        width: 20px;
-    }
-    
-    .card8 {
-        position: absolute;
-        left: 0px;
-        top: 470px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    .image-container {
-        margin-top: -5px;
-        margin-left: 50px;
-        width: 220px;
-        height: 30px;
-    }
-    
-    .image-champ {
-        width: 35px;
-        height: 35px;
-        margin-top: -5px
-    }
-    
-    .image-container2 {
-        margin-top: 25px;
-        margin-left: 50px;
-        width: 220px;
-        height: 30px;
-    }
-    
-    .image-champ2 {
-        margin-top: -45px;
-        width: 35px;
-        height: 35px;
-    }
-    
-}
-
-/* --------------- MEDIA SCREEN 411 ----------------- */
-
-@media screen and (max-width: 411px){
-    .form {
-        width: 411px;
-        height: 1550px;
-        background: #ffffff;
-        border-top-left-radius: 60px;
-        border-top-right-radius: 60px;
-        border-bottom-right-radius:60px;
-        border-bottom-left-radius:60px;
-    }
-    
-    .main-section {
-        font-family: "Raleway", sans-serif;
-        position: absolute;
-        top: 80px;
-        left: 0px;
-        width: 411px;
-        height: 1550px;
-        background: #ffffff;
-        border-bottom-left-radius:60px;
-        border-bottom-right-radius:60px;
-        -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    }
-    
-    .header-section {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 411px;
-        height: 80px;
-        border-top-left-radius: 60px;
-        border-top-right-radius: 60px;
-    }
-    .division {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 411px;
-        height: 80px;
-        background-color: #b9b9b9;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-style: hidden hidden solid hidden;
-        border-color: #cccccc;
-    }
-    .card {
-        width: 345px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 35px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
     }
     .card2 {
-        position: absolute;
-        top: 480px;
-        width: 345px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 35px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+        height: 500px;
     }
-    .card6 {
-        position: absolute;
-        top: 880px;
-        width: 345px;
-        height: 650px;
-        left: 35px;
-        background: #ffffff;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+    .card2 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 500px;
+     }
+     .card2 .form .img-rank {
+         width: 330px;
+         margin-left: 20px;
+     }
+     .card2 .form .img-rank .division {
+        margin-left: 70px;
+    }
+     .card2 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: 40px;
+        width: 300px;
+        height: 200px ;
+    }
+    .card2 .form .container-rank select {
+        position: relative;
+        left: 20px ;
+        top: 40px ;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card3 .configuration {
+        position: relative;
+        left: 80px;
+    }
+    .card3 .test {
+        position: relative;
+        left: -210px;
+        top: 520px;
     }
 }
 
-/* --------------- MEDIA SCREEN 360 ----------------- */
-
-@media screen and (max-width: 360px){
-
-    .form {
-        width: 360px;
-    }
-    
-    .main-section {
-        font-family: "Raleway", sans-serif;
-        position: absolute;
-        top: 80px;
-        left: 0px;
-        width: 360px;
-        height: 1550px;
-        background: #ffffff;
-    }
-    
-    .header-section {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 360px;
-        height: 80px;
-    }
-    
-    .header-section p {
-        font-size: 20px;
-        line-height: 1em;
-        font-weight: 500;
-        margin-top: 10px;
-        margin-left: -30px;
-        margin-top: 30px;
-    }
-    
-    .division {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 360px;
-        height: 80px;
-        border-top-left-radius: 0px;
-        background-color: #b9b9b9;
-        border-style: hidden hidden solid hidden;
-        border-color: #cccccc;
-    }
-    
-    .division:hover {
-        background: #ffffff;
-        border-style: solid hidden hidden hidden;
-        border-color: #f00fdd;
-        border-width: 3px;
-    }
-    
-    .main-section h1 {
-        font-size: 26px;
+@media (min-width:768px) and (max-width: 899px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "card1 card3"
+        "card1 card3"
+        "card2 card3"
+        "card2 card3";
+        grid-template-rows: 300px 300px; 
+        grid-template-columns: 49% 49%;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
         margin-top: 20px;
-    
+        margin-left: 10px;
+        margin-bottom: 20px;
+     }
+     .card1 .form {
+        position: relative;
+        left: 5px;
+        width: 300px;
+        height: 600px;
+     }
+     .card1 .form .img-rank {
+        width: 330px;
+        margin-left: 20px;
+     }
+     .card1 .form .img-rank .division {
+        margin-left: 70px;
+        margin-top: 40px;
     }
-    
-    
-    .sub-title {
-        line-height: 1em;
-        font-weight: 500;
+     .card1 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        width: 300px;
+        height: 300px ;
     }
-    
-    .card {
-        width: 345px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 6px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
+    .card1 .form .container-rank select {
+        position: relative;
+        left: 25px;
+        top: 60px;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
     }
-    
-    .card-container {
-        width: 345px;
+    .card2 {
+        height: 500px;
+    }
+    .card2 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 500px;
+     }
+     .card2 .form .img-rank {
+         width: 330px;
+         margin-left: 20px;
+     }
+     .card2 .form .img-rank .division {
+        margin-left: 70px;
+    }
+     .card2 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        width: 300px;
+        height: 200px ;
+    }
+    .card2 .form .container-rank select {
+        position: relative;
+        left: 20px ;
+        top: 40px ;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card3 .configuration {
+        position: relative;
+        left: 40px;
+    }
+    .card3 .test {
+        position: relative;
+        left: -260px;
+        top: 520px;
+    }
+}
+
+@media (min-width:411px) and (max-width:767px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card3";
+        grid-template-rows: 600px 500px 600px 500px; 
+        grid-template-columns: 380px;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+        margin-top: 20px;
+        margin-left: 15px;
+     }
+     .card1 .form {
+        position: relative;
+        left: 5px;
+        width: 300px;
+        height: 600px;
+     }
+     .card1 .form .img-rank {
+         margin-left: 20px;
+         width: 400px;
+     }
+     .card1 .form .img-rank .division {
+        margin-left: 70px;
+        margin-top: 40px;
+    }
+     .card1 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        width: 300px;
+        height: 300px ;
+    }
+    .card1 .form .container-rank select {
+        position: relative;
+        left: 25px;
+        top: 60px;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card2 {
+        height: 500px;
+    }
+    .card2 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 500px;
+     }
+     .card2 .form .img-rank {
+         width: 330px;
+         margin-left: 20px;
+     }
+     .card2 .form .img-rank .division {
+        margin-left: 70px;
+    }
+     .card2 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: 20px;
+        width: 300px;
+        height: 200px ;
+    }
+    .card2 .form .container-rank select {
+        position: relative;
+        left: 20px ;
+        top: 40px ;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card3 .configuration {
+        position: relative;
+        left: 40px;
+    }
+    .card3 .test {
+        position: relative;
+        left: -260px;
+        top: 520px;
+    }
+}
+
+@media (min-width:375px) and (max-width:410px){
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card3";
+        grid-template-rows: 600px 500px 600px 500px; 
+        grid-template-columns: 340px;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+        margin-top: 20px;
+        margin-left: 20px;
+     }
+     .card1 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 600px;
+     }
+     .card1 .form .img-rank {
+         width: 330px ;
+         margin-left: -10px;
+     }
+     .card1 .form .img-rank .division {
+        margin-left: 70px ;
+        margin-top: 40px ;
+    }
+     .card1 .form .container-rank {
+        position: relative;
+        top: 10px ;
+        left: -5px ;
+        width: 300px;
+        height: 300px  ;
+    }
+    .card1 .form .container-rank select {
+        position: relative;
+        left: 25px ;
+        top: 60px ;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card2 {
+        height: 500px;
+    }
+    .card2 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 500px;
+     }
+     .card2 .form .img-rank {
+         width: 330px ;
+         margin-left: -10px;
+     }
+     .card2 .form .img-rank .division {
+        margin-left: 70px ;
+    }
+     .card2 .form .container-rank {
+        position: relative;
+        top: 10px ;
+        left: -5px ;
+        width: 300px;
+        height: 200px ;
+    }
+    .card2 .form .container-rank select {
+        position: relative;
+        left: 20px ;
+        top: 40px ;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card3 .configuration {
+        position: relative;
+        left: 20px;
+    }
+    .card3 .test {
+        position: relative;
+        left: -280px;
+        top: 520px;
+    }
+}
+
+@media (max-width:360px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card3";
+        grid-template-rows: 600px 500px 600px; 
+        grid-template-columns: 340px;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+        margin-top: 20px;
+        margin-left: 10px;
+     }
+     .card1 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 600px;
+     }
+     .card1 .form .img-rank {
+         width: 330px ;
+         margin-left: -10px;
+     }
+     .card1 .form .img-rank .division {
+        margin-left: 70px ;
+        margin-top: 40px ;
+    }
+     .card1 .form .container-rank {
+        position: relative;
+        top: 10px ;
+        left: -5px ;
+        width: 300px;
+        height: 300px  ;
+    }
+    .card1 .form .container-rank select {
+        position: relative;
+        left: 25px ;
+        top: 60px ;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card2 {
+        height: 500px;
+    }
+    .card2 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 500px;
+     }
+     .card2 .form .img-rank {
+         width: 330px ;
+         margin-left: -10px;
+     }
+     .card2 .form .img-rank .division {
+        margin-left: 70px ;
+    }
+     .card2 .form .container-rank {
+        position: relative;
+        top: 10px ;
+        left: -5px ;
+        width: 300px;
+        height: 200px ;
+    }
+    .card2 .form .container-rank select {
+        position: relative;
+        left: 20px ;
+        top: 40px ;
+        width: 300px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card3 .configuration {
+        position: relative;
+        left: 0px;
+    }
+    .card3 .test {
+        position: relative;
+        left: 0px;
+        top: 520px;
+    }
+}
+
+@media (max-width:320px) {
+    #grilla {
+        display: grid;
+        grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card3";
+        grid-template-rows: 600px 500px 600px; 
+        grid-template-columns: 300px;
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+        margin-top: 20px;
+        margin-left: 10px;
+     }
+     .card1 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 600px;
+     }
+     .card1 .form .img-rank {
+         width: 330px;
+         margin-left: -20px;
+     }
+     .card1 .form .img-rank .division {
+        margin-left: 70px;
+        margin-top: 40px;
+    }
+     .card1 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: -5px;
+        width: 300px;
+        height: 300px;
+    }
+    .card1 .form .container-rank select {
+        position: relative;
+        left: 25px;
+        top: 60px;
+        width: 250px;
+        height: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .card2 {
+        height: 500px;
+    }
+    .card2 .form {
+        position: relative;
+        left: 5px;
+        width: 360px;
+        height: 500px;
+     }
+     .card2 .form .img-rank {
+         width: 330px;
+         margin-left: -20px;
+     }
+     .card2 .form .img-rank .division {
+        margin-left: 70px;
+    }
+     .card2 .form .container-rank {
+        position: relative;
+        top: 10px;
+        left: -5px;
+        width: 300px;
         height: 200px;
     }
-    
-    
-    .card2 {
-        position: absolute;
-        top: 480px;
-        width: 345px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 6px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    }
-    
-    .card2-container {
-        width: 345px;
-        height: 360px;
-    }
-    
-    
-    .card-title {
-        font-size: 20px;
-        font-weight: 600;
-        margin-left: 10px;
-    }
-    
-    
-    .img-fluid {
-        position: absolute;
-        left: 50px;
-        top: 22px;
-        width: 35px;
-        height: 35px;
-    }
-    
-    .img-fluid2 {
-        position: absolute;
-        left: 0px;
-        top: 24px;
-        width: 30px;
-        height: 30px;
-    }
-    
-    .img-fluid3 {
-        position: absolute;
-        left: 0px;
-        top: 24px;
-        width: 30px;
-        height: 30px;
-    }
-    
-    .img-fluid4 {
-        position: absolute;
-        left: 100px;
-        top: 20px;
-        width: 160px;
-        height: 170px;
-    }
-    
-    .rank {
-        position: absolute;
+    .card2 .form .container-rank select {
+        position: relative;
         left: 20px;
-        top: 200px;
-        width: 300px;
-        height: 50px;
-        background: #f1f0f0;
-        border-radius: 50px;
-    
-    }
-    
-    .rank select {
-        position: absolute;
-        left: 15px;
-        background: #f1f0f0;
-        width: 280px;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 18px;
-        border: none;
-    }
-    
-    .divition select{
-        position: absolute;
-        left: 15px;
-        background: #f1f0f0;
-        width: 280px;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 18px;
-        border: none;
-    }
-    
-    .divition {
-        position: absolute;
-        left: 20px;
-        top: 255px;
-        width: 300px;
-        height: 50px;
-        background: #ececec;
-        border-radius: 50px;
-    }
-    
-    .status-lp {
-        position: absolute;
-        top: 315px;
-        left: 80px;
-        width: 200px;
-        height: 30px;
-        border-radius: 50px;
-        background: #ececec;
-        border: none;
-    }
-    
-    .status-lp select {
-        width: 200px;
-        height: 30px;
-        background: #ececec;
-        border-radius: 50px;
-        border: none;
-    }
-    
-    .continue {
-        position: absolute;
-        left: 70px;
-        top: 570px;
-        width: 200px;
-        height: 50px;
-        font-size: 12px;
-        border-radius: 20px;
-        background-color: #ff589e;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: 0.25px;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-    }
-    
-    .continue:hover {
-        background-color: rgb(218, 49, 218);
-        -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    }
-    
-    .cont {
-        font-size: 17px;
-        font-weight: 500;
-        margin-top: 12px;
-        color: #ffffff;
-    }
-    
-    /* --- CARD ---- 3 */
-    
-    .card3 {
+        top: 40px;
         width: 250px;
         height: 50px;
-        margin-top: -10px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
+        margin-bottom:5px;
+        border-radius: 10px;
+        outline: none;
     }
-    
-    .server-icon {
-        margin-top: 10px;
-        margin-left: 15px;
-        width: 32px;
-        height: 32px;
+    .card3 .configuration {
+        position: relative;
+        left: -15px;
     }
-    
-    .server-title {
-        color: #000;
-        margin-top: -28px;
-        margin-left: 60px;
+    .card3 .test {
+        position: relative;
+        left: -15px;
+        top: 520px;
     }
-    
-    .server {
-        margin-top: -54px;
-        margin-left: 125px;
-    }
-    
-    .server select {
-        margin-left: 5px;
-        width: 120px;
-        height: 50px;
-        border-radius: 50px;
-        background: #ffffff;
-        border: none;
-    }
-    
-    /* --- CARD ---- 4 */
-    
-    .card4 {
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    
-    }
-    
-    .modo {
-        margin-top: -44px;
-        margin-left: 125px;
-    }
-    
-    .modo select {
-        margin-left: 5px;
-        width: 120px;
-        height: 30px;
-        border-radius: 50px;
-        background: #ffffff;
-        border: none;
-    }
-    
-    
-    /* --- CARD ---- 5 */
-    
-    .card5 {
-        position: absolute;
-        left: 0px;
-        top: 340px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    
-    /* --- CARD 6 --- */
-    
-    .card6 {
-        position: absolute;
-        top: 880px;
-        width: 345px;
-        height: 650px;
-        left: 6px;
-        background: #ffffff;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    }
-    
-    .card-title2 {
-        font-size: 20px;
-        font-weight: 600;
-        margin-left: 140px;
-        margin-top: 10px;
-    }
-    
-    .card6 hr {
-        width: 250px;
-    }
-    
-    .price-a {
-        margin-left: 40px;
-        margin-top: -10px;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .price-b {
-        margin-left: 140px;
-        margin-top: -10px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #b8b9b8;
-    }
-    
-    .price-c {
-        margin-left: 120px;
-        margin-top: -15px;
-        font-size: 22px;
-        font-weight: 600;
-        color: #a82cda;
-    }
-    
-    .time-a {
-        margin-left: 40px;
-        margin-top: 0px;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .time-b {
-        margin-left: 140px;
-        margin-top: -50px;
-        font-size: 22px;
-        font-weight: 600;
-    }
-    
-    /* --- CARD 7 --- */
-    
-    .card7 {
-        position: absolute;
-        top: 390px;
-        left: 0px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    .checkbox {
-        position: absolute;
-        left: 195px;
-        top: 15px;
-        height: 20px;
-        width: 20px;
-    }
-    
-    .card8 {
-        position: absolute;
-        left: 0px;
-        top: 470px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    .image-container {
-        margin-top: -5px;
-        margin-left: 50px;
-        width: 220px;
-        height: 30px;
-    }
-    
-    .image-champ {
-        width: 35px;
-        height: 35px;
-        margin-top: -5px
-    }
-    
-    .image-container2 {
-        margin-top: 25px;
-        margin-left: 50px;
-        width: 220px;
-        height: 30px;
-    }
-    
-    .image-champ2 {
-        margin-top: -45px;
-        width: 35px;
-        height: 35px;
-    }
-    
 }
 
-/* --------------- MEDIA SCREEN 320 ----------------- */
-
-@media screen and (max-width: 320px){
-    .form {
-        top: 0em;
-        width: 320px;
-        height: 1550px;
-        background: #ffffff;
-        border-top-left-radius: 60px;
-        border-top-right-radius: 60px;
-        border-bottom-right-radius:60px;
-        border-bottom-left-radius:60px;
-    }
-    
-    .main-section {
-        font-family: "Raleway", sans-serif;
-        position: absolute;
-        top: 80px;
-        left: 0px;
-        width: 320px;
-        height: 1550px;
-        background: #ffffff;
-        border-bottom-left-radius:60px;
-        border-bottom-right-radius:60px;
-        -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    }
-    
-    .header-section {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 320px;
-        height: 80px;
-    }
-    
-    .header-section p {
-        font-size: 20px;
-        line-height: 1em;
-        font-weight: 500;
-        margin-top: 10px;
-        margin-left: -30px;
-        margin-top: 30px;
-    }
-    
-    .division {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 320px;
-        height: 80px;
-        background-color: #b9b9b9;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-style: hidden hidden solid hidden;
-        border-color: #cccccc;
-    }
-    
-    .division:hover {
-        background: #ffffff;
-        border-style: solid hidden hidden hidden;
-        border-color: #f00fdd;
-        border-width: 3px;
-    }
-    
-    /*
-    .division2 {
-        position: absolute;
-        top: 0px;
-        left: 400px;
-        width: 400px;
-        height: 80px;
-        background-color: #e9e8e8;
-        border-style: hidden hidden solid hidden;
-        border-color: #cccccc;
-    }
-    
-    .division2:hover {
-        background: #ffffff;
-        border-style: solid hidden hidden hidden;
-        border-color: #f00fdd;
-        border-width: 3px;
-    }
-    
-    .division3 {
-        position: absolute;
-        top: 0px;
-        left: 800px;
-        width: 400px;
-        height: 80px;
-        background-color: #e9e8e8;
-        border-top-right-radius: 60px;
-        border-style: hidden hidden solid hidden;
-        border-color: #cccccc;
-    }
-    
-    .division3:hover {
-        background: #ffffff;
-        border-style: solid hidden hidden hidden;
-        border-color: #f00fdd;
-        border-width: 3px;
-    }
-    */
-    
-    
-    .main-section h1 {
-        font-size: 26px;
-        margin-top: 20px;
-    
-    }
-    
-    
-    .sub-title {
-        line-height: 1em;
-        font-weight: 500;
-    }
-    
-    .card {
-        width: 300px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 9px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    }
-    
-    .card2 {
-        position: absolute;
-        top: 480px;
-        width: 300px;
-        height: 360px;
-        background: #ffffff;
-        margin-left: 9px;
-        margin-top: 30px;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    }
-    
-    .card-title {
-        font-size: 20px;
-        font-weight: 600;
-        margin-left: 10px;
-    }
-    
-    
-    .img-fluid {
-        position: absolute;
-        left: 30px;
-        top: 22px;
-        width: 35px;
-        height: 35px;
-    }
-    
-    .img-fluid2 {
-        position: absolute;
-        left: 0px;
-        top: 24px;
-        width: 30px;
-        height: 30px;
-    }
-    
-    .img-fluid3 {
-        position: absolute;
-        left: 0px;
-        top: 24px;
-        width: 30px;
-        height: 30px;
-    }
-    
-    .img-fluid4 {
-        position: absolute;
-        left: 75px;
-        top: 20px;
-        width: 160px;
-        height: 170px;
-    }
-    
-    .rank {
-        position: absolute;
-        left: 19px;
-        top: 200px;
-        width: 250px;
-        height: 50px;
-        background: #f1f0f0;
-        border-radius: 50px;
-    
-    }
-    
-    .rank select {
-        position: absolute;
-        left: 15px;
-        background: #f1f0f0;
-        width: 250px;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 18px;
-        border: none;
-    }
-    
-    .divition select{
-        position: absolute;
-        left: 19px;
-        background: #f1f0f0;
-        width: 250px;
-        height: 50px;
-        border-radius: 50px;
-        font-size: 18px;
-        border: none;
-    }
-    
-    .divition {
-        position: absolute;
-        left: 20px;
-        top: 255px;
-        width: 250px;
-        height: 50px;
-        background: #ececec;
-        border-radius: 50px;
-    }
-    
-    .status-lp {
-        position: absolute;
-        top: 315px;
-        left: 60px;
-        width: 200px;
-        height: 30px;
-        border-radius: 50px;
-        background: #ececec;
-        border: none;
-    }
-    
-    .status-lp select {
-        width: 200px;
-        height: 30px;
-        background: #ececec;
-        border-radius: 50px;
-        border: none;
-    }
-    
-    .continue {
-        position: absolute;
-        left: 60px;
-        top: 570px;
-        width: 200px;
-        height: 50px;
-        font-size: 12px;
-        border-radius: 20px;
-        background-color: #ff589e;
-        text-transform: uppercase;
-        color: #fff;
-        letter-spacing: 0.25px;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px -9px rgba(0,0,0,0.75);
-    }
-    
-    .continue:hover {
-        background-color: rgb(218, 49, 218);
-        -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-        box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-    }
-    
-    .cont {
-        font-size: 17px;
-        font-weight: 500;
-        margin-top: 12px;
-        color: #ffffff;
-    }
-    
-    /* --- CARD ---- 3 */
-    
-    .card3 {
-        width: 250px;
-        height: 50px;
-        margin-top: -10px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    .mini-card-container {
-        width: 400px;
-        height: 50px;
-    }
-    
-    .server-icon {
-        margin-top: 10px;
-        margin-left: 15px;
-        width: 32px;
-        height: 32px;
-    }
-    
-    .server-title {
-        color: #000;
-        margin-top: -28px;
-        margin-left: 60px;
-    }
-    
-    .server {
-        margin-top: -54px;
-        margin-left: 125px;
-    }
-    
-    .server select {
-        margin-left: 5px;
-        width: 120px;
-        height: 50px;
-        border-radius: 50px;
-        background: #ffffff;
-        border: none;
-    }
-    
-    /* --- CARD ---- 4 */
-    
-    .card4 {
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    
-    }
-    
-    .modo {
-        margin-top: -44px;
-        margin-left: 125px;
-    }
-    
-    .modo select {
-        margin-left: 5px;
-        width: 120px;
-        height: 30px;
-        border-radius: 50px;
-        background: #ffffff;
-        border: none;
-    }
-    
-    
-    /* --- CARD ---- 5 */
-    
-    .card5 {
-        position: absolute;
-        left: 0px;
-        top: 340px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    
-    /* --- CARD 6 --- */
-    
-    .card6 {
-        position: absolute;
-        top: 880px;
-        width: 300px;
-        height: 650px;
-        left: 9px;
-        background: #ffffff;
-        border-radius: 50px;
-        -webkit-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        -moz-box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-        box-shadow: 10px 10px 5px -6px rgba(148,148,148,1);
-    }
-    
-    .card-title2 {
-        font-size: 20px;
-        font-weight: 600;
-        margin-left: 120px;
-        margin-top: 10px;
-    }
-    
-    .card6 hr {
-        width: 250px;
-    }
-    
-    .price-a {
-        margin-left: 40px;
-        margin-top: -10px;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .price-b {
-        margin-left: 140px;
-        margin-top: -10px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #b8b9b8;
-    }
-    
-    .price-c {
-        margin-left: 120px;
-        margin-top: -15px;
-        font-size: 22px;
-        font-weight: 600;
-        color: #a82cda;
-    }
-    
-    .time-a {
-        margin-left: 40px;
-        margin-top: 0px;
-        font-size: 14px;
-        font-weight: 600;
-    }
-    
-    .time-b {
-        margin-left: 140px;
-        margin-top: -50px;
-        font-size: 22px;
-        font-weight: 600;
-    }
-    
-    /* --- CARD 7 --- */
-    
-    .card7 {
-        position: absolute;
-        top: 390px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    .checkbox {
-        position: absolute;
-        left: 195px;
-        top: 15px;
-        height: 20px;
-        width: 20px;
-    }
-    
-    .card8 {
-        position: absolute;
-        top: 470px;
-        width: 250px;
-        height: 50px;
-        margin-left: 20px;
-        background: #ffffff;
-        border-radius: 50px;
-    }
-    
-    .image-container {
-        margin-top: -5px;
-        margin-left: 50px;
-        width: 220px;
-        height: 30px;
-    }
-    
-    .image-champ {
-        width: 35px;
-        height: 35px;
-        margin-top: -5px
-    }
-    
-    .image-container2 {
-        margin-top: 25px;
-        margin-left: 50px;
-        width: 220px;
-        height: 30px;
-    }
-    
-    .image-champ2 {
-        margin-top: -45px;
-        width: 35px;
-        height: 35px;
-    }
-    
-}
+/*
+------------------------------------------------
+        Second Step Card Section
+------------------------------------------------
+*/
 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Modal from 'react-modal'
 import './modals.css'
-import top from '../TOP.png'
+import top from '../top.png'
 import jungle from '../JUNGLER.png'
-import mid from '../MID.png'
-import bot from '../BOT.png'
-import support from '../SUPPORT.png'
+import mid from '../mid.png'
+import bot from '../bot.png'
+import support from '../support.png'
 
 export default function ModalLanes({ openLanes, setOpenLanes, setLanes, lanes }) {
 
@@ -49,7 +49,7 @@ export default function ModalLanes({ openLanes, setOpenLanes, setLanes, lanes })
                 <div className="div-lane">
                     <span>TOP</span>
                     <img alt="top" src={top} />
-                    <input type="checkbox" onChange={(e) => handleCheck(e, 'TOP')} />
+                    <input type="checkbox" onChange={(e) => handleCheck(e, 'top')} />
                 </div>
                 <div className="div-lane">
                     <span>JUNGLER</span>
@@ -59,17 +59,17 @@ export default function ModalLanes({ openLanes, setOpenLanes, setLanes, lanes })
                 <div className="div-lane">
                     <span>MID</span>
                     <img alt="mid" src={mid} />
-                    <input type="checkbox" onChange={(e) => handleCheck(e, 'MID')} />
+                    <input type="checkbox" onChange={(e) => handleCheck(e, 'mid')} />
                 </div>
                 <div className="div-lane">
                     <span>BOT</span>
                     <img alt="bot" src={bot} />
-                    <input type="checkbox" onChange={(e) => handleCheck(e, 'BOT')} />
+                    <input type="checkbox" onChange={(e) => handleCheck(e, 'bot')} />
                 </div>
                 <div className="div-lane">
                     <span>SUPPORT</span>
                     <img alt="support" src={support} />
-                    <input type="checkbox" onChange={(e) => handleCheck(e, 'SUPPORT')} />
+                    <input type="checkbox" onChange={(e) => handleCheck(e, 'support')} />
                 </div>
             </div>
             {/* <div className="btn-wrapper">
