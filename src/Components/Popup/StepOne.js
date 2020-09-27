@@ -282,21 +282,27 @@ export default function StepOne({ set }) {
                                 <img src="" className="division"></img> { /* Aca va la imagen de los rank */ }
                             </div>
                             <div className="container-rank">				
-                                <select name="ranks">
+                             <select name="ranks" value={fromRank} onChange={(e) => {
+                                 setFromRank(e.target.value)
+                                 fromRef.curent = e.target.value
+                                 handleSelect(e, setFrom, setVisFrom)
+
+                             }}>
                                     <option value="1">Iron</option> 
                                     <option value="2">Bronce</option> 
                                     <option value="3">Silver</option>
                                     <option value="10">Gold</option> 
                                     <option value="11">Platino</option> 
                                     <option value="12">Diamond</option> 
-                                </select>
-                                <select name="divisions">
+                                  </select>
+                                 <div className="divition" style={{ visibility: visFrom }}>                          
+                                    <select name="divisions" onChange={(e) => changeDivision(e, divFromRef)}>
                                     <option value="1"> Division I </option> 
                                     <option value="2"> Division II </option> 
                                     <option value="3"> Division III </option>
                                     <option value="10">Division IV </option> 
-
-                                </select>
+                                 </select>
+                                 </div>
                                 <select name="lp">
                                     <option value="1"> 0  - 25 LP </option> 
                                     <option value="2"> 25 - 50 LP </option> 
@@ -314,7 +320,11 @@ export default function StepOne({ set }) {
                                 <img src="" className="division"> </img> { /* Aca va la imagen de los rank */ }
                             </div>
                             <div className="container-rank">				
-                                <select name="ranks">
+                             <select name="ranks" value={toRank} onChange={(e) => {
+                                setToRank(e.target.value)
+                                 toRef.current = e.target.value
+                                 handleSelect(e, setTo, setVisTo)
+                             }}>
                                     <option value="1">Iron</option> 
                                     <option value="2">Bronce</option> 
                                     <option value="3">Silver</option>
@@ -324,13 +334,15 @@ export default function StepOne({ set }) {
                                     <option value="13">Master</option>
                                     <option value="14">Grand Master</option>
                                     <option value="15">Challenger</option>
-                                </select>
-                                <select name="divisions">
+                             </select>
+                                <div className="divition" style={{ visibility: visTo }}> 
+                                <select name="divisions" onChange={(e) => changeDivision(e, divToRef)}>
                                     <option value="1"> Division I </option> 
                                     <option value="2"> Division II </option> 
                                     <option value="3"> Division III </option>
                                     <option value="10">Division IV </option> 
-                                </select>
+                                 </select>
+                                 </div>
                             </div>
                         </div>
                     </section>
@@ -345,7 +357,10 @@ export default function StepOne({ set }) {
                                 <div className="server"> 
                                     <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"> </img>
                                     <p> Servidor: </p>
-                                    <select name="servidores">
+                                     <select name="servidores" onChange={(e) => {
+                                         serverRef.current = e.target.value
+                                         calculatePrice()
+                                     }}>
                                         <option value="1"> LAS </option> 
                                         <option value="2"> BR (+10%)</option> 
                                     </select>
@@ -353,7 +368,7 @@ export default function StepOne({ set }) {
                                 <div className="server"> 
                                     <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"> </img>
                                     <p> Modo Queue: </p>
-                                    <select name="modo">
+                                    <select name="modo" onChange={modeChange}>
                                         <option value="1"> Solo </option> 
                                         <option value="2"> Duo (+15%)</option> 
                                         <option value="3"> Flexible </option>
@@ -363,7 +378,7 @@ export default function StepOne({ set }) {
                                 <div className="fast"> 
                                     <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"></img>
                                     <p> Servicio rapido: <span>+30%</span> </p>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox"> </input>
+                                    <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleFast}> </input>
                                     <div className="streaming"> 
                                         <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"></img>
                                         <p> Discord Stream: <span> +15% </span> </p>
@@ -374,31 +389,22 @@ export default function StepOne({ set }) {
                                 <div className="extra">
                                     <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"> </img>
                                     <p> Fijar campeones: <span> +10% </span></p>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox"></input>
+                                         <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleOpenChamps}></input>
+                                         <ModalChamps openChamps={openChamps} setOpenChamps={setOpenChamps} setChamps={setChamps} champions={champs} lanes={lanes} ></ModalChamps>
                                     <div className="image-container">
-                                        <img src="./img/example.png" className="image-champ" /> { /* Aca va la imagen de los campeones */ }
-                                        <img src="./img/example.png" className="image-champ" />
-                                        <img src="./img/example.png" className="image-champ" />
-                                        <img src="./img/example.png" className="image-champ" />
-                                        <img src="./img/example.png" className="image-champ" />
-                                        <img src="./img/example.png" className="image-champ" />
-                                        <img src="./img/example.png" className="image-champ" />
+                                     {
+                                        champs.map(champ => <img src={champ.img} className="image-champ" alt="" />)            
+                                     }
                                 </div>
                                     <div className="extra2">
                                         <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon" />
                                         <p>Fijar roles: <span> +10% </span></p>
-                                        <input
-                                            type="checkbox"
-                                            id="cbox1"
-                                            value="first_checkbox"
-                                            className="checkbox"
-                                                            />
+                                             <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleLanes} />
+                                             <ModalLanes openLanes={openLanes} setOpenLanes={setOpenLanes} setLanes={setLanes} lanes={lanes} /> 
                                         <div className="image-container">
-                                            <img src="./img/example2.png" className="image-champ" /> { /* Aca va la imagen de los roles */ }
-                                            <img src="./img/example2.png" className="image-champ" />
-                                            <img src="./img/example2.png" className="image-champ" />
-                                            <img src="./img/example2.png" className="image-champ" />
-                                            <img src="./img/example2.png" className="image-champ" />
+                                            {
+                                                lanes.map(role => <img key={role} src={getLaneImage(role)} alt={role} className="image-champ" />)         
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -406,14 +412,14 @@ export default function StepOne({ set }) {
                                 <div className="test">
                                     <h1> Informacion de boost </h1>
                                     <div className="price">
-                                        <a> Precio total </a>
-                                        <p className="old"> $0000 </p>
-                                        <p className="now"> $1111 </p>
+                                             <a> Precio total </a>
+                                             {price ? <p className="old"> <del> ${price + (price * 0.2)} ARS </del></p> : <p></p> }
+                                        <p className="now"> ${price} ARS </p>
                                         <hr/>
                                     </div>
                                     <div className="time">
                                         <a> Tiempo estimado </a>
-                                        <p className="count"> 40 </p>
+                                        <p className="count"> {days} </p>
                                         <p> Dias </p>
                                         <hr/>
                                     </div>
@@ -426,7 +432,9 @@ export default function StepOne({ set }) {
                                         <p> <img src="./verify.png" className="icon"></img> 1 Sesion de Coaching gratis </p>
                                         <hr/>
                                     </div>
-                                    <button> Continuar </button>
+                                    <div className="continue" style={{ visibility: cont }} onClick={() => set(true)}>
+                                         <button> Continuar </button>  
+                                    </div>
                                 </div>
                             </hr>
                         </div>

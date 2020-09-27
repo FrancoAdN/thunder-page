@@ -129,7 +129,7 @@ export default function StepTwo({ set }) {
 
     return (
 
-        <section id="steptwo">
+        <section id="steptwo" onSubmit= {formSubmit}>
             <div id="card4" class="card4"> 
                 <div class="title">
                     <h1> <span> Completar </span> con <span > sus </span> datos </h1>
@@ -137,27 +137,27 @@ export default function StepTwo({ set }) {
                     <br/> Gracias por confiar en nosotros ;)
                     </p>
                  </div>
-                    <div class="form-container">
+                    <div class="form-container" >
                         <div class="user">
-                            <label > Nombre de invocador </label> <br /> <input required type="text"/>
+                        <label > Nombre de invocador </label> <br /> <input required type="text" value={summoners} onChange={(e) => setSummoners(e.target.value)} />
                         </div>
                         <div class>
-                            <label > Usuario </label> <br /> <input required type="text"/>
+                        <label > Usuario </label> <br /> <input required type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
                         </div>
                         <div class>
-                            <label > Contraseña </label> <br /> <input required type="text"/>
+                            <label > Contraseña </label> <br /> <input required type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
                         </div>
                         <div class>
-                            <label className="" > Email </label> <br /> <input required className="email"/>
+                            <label className="" > Email </label> <br /> <input required className="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                         </div>
                         <div class>
-                            <label className="" > Confirmar email </label> <br /> <input required className="email" type="email"/>
+                            <label className="" > Confirmar email </label> <br /> <input required className="email" type="email" value={cemail} onChange={(e) => setCemail(e.target.value)}/>
                         </div>
                         <div class>
-                            <label className="" > Referido </label> <br /> <input required className="email" type="text"/>
+                            <label className="" > Referido </label> <br /> <input required className="email" type="text" value={ref} onChange={(e) => setRef(e.target.value)}/>
                         </div>
                         <div class="">
-                            <label> Mensaje de contacto (Opcional) </label> <br /> <textarea type="text" class="form"></textarea>
+                            <label> Mensaje de contacto (Opcional) </label> <br /> <textarea type="text" class="form" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                         </div>
                     </div>
                     <div class="payment-metod">
@@ -184,28 +184,28 @@ export default function StepTwo({ set }) {
                         <hr/>
                     </div>
                     <div class="resume">
-                        <img src="./img/1.png" class="rank"/> { /* Aca va la imagen de los rank */ }
-                        <img src="./img/1.png" class="rank"/> { /* Aca va la imagen de los rank */ }
-                        <p class="rank-status"> Desde Iron I hasta Silver IV </p>
+                        <img src={imgfrom} class="rank"/> { /* Aca va la imagen de los rank */ }
+                        <img src={imgto} class="rank"/> { /* Aca va la imagen de los rank */ }
+                        <p class="rank-status"> Desde {namefrom} hasta {nameto} </p>
                         <hr/>
                     </div>
                     <div class="payment-info">
                         <div class="price">
                             <a class="padd"> Precio final </a>
-                            <p class="old"> $0000 </p>
-                            <p class="now"> $1111 </p>
+                            {price ? <p className="old"> <del> ${price + (price * 0.2)} ARS </del></p> : <p></p> }
+                            <p class="now"> ${price} ARS </p>
                             <hr/>
                         </div>
                         <div class="time">
                             <a class="padd"> Tiempo total </a>
-                            <p class="count"> 0 </p>
+                            <p class="count"> {days} </p>
                             <p> Dias </p>
                             <hr/>
                             <p> <img src="./img/verify.png" class="icon"/> Soporte al cliente 24/7 </p> { /* Aca va la imagen verify */ }
                             <p> <img src="./img/verify.png" class="icon"/> Acceso a beneficios exclusivos </p> { /* Aca va la imagen verify */ }
                             <p> <img src="./img/verify.png" class="icon"/> Servicios adicionales incluidos </p> { /* Aca va la imagen verify */ }
                         </div>
-                        <button> Pagar </button>
+                        <button className="pay" type="submit"> Pagar </button>
                         <div class="dude"> 
                             <p> Ante cualquier duda con tu pago, contactanos a <a href="https://discord.gg/CrxGDbF"> Discord.</a> </p>
                         </div>
