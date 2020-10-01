@@ -72,6 +72,7 @@ export default function ModalLanes({ openLanes, setOpenLanes, setLanes, lanes })
                     <input type="checkbox" onChange={(e) => handleCheck(e, 'support')} />
                 </div>
             </div>
+            <p className="alert text-center"> Nota: Debe elegir como minimo 3 lineas </p>
             {/* <div className="btn-wrapper">
                 <button className="btn-roles" onClick={handleOnclick}>FIJAR ROLES</button>
             </div> */}

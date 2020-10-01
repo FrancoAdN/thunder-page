@@ -1,3 +1,129 @@
+/* 
+---------------------------------------------
+mini header
+--------------------------------------------- 
+*/
+.mini-header {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    height: 400px;
+}
+
+.mini-header .header-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    text-align: center;
+    width: 100%;
+}
+
+.mini-header .header-text h1 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 54px;
+    letter-spacing: 1.4px;
+    color: #fff;
+}
+
+.mini-header .header-text p {
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    line-height: 28px;
+    letter-spacing: 0.25px;
+    margin-bottom: -70px;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .mini-header .header-text {
+        top: 65% !important;
+        transform: perspective(1px) translateY(-60%) !important;
+        text-align: center;
+    }
+    .mini-header .header-text h1 {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 15px;
+    }
+    .mini-header .header-text h1 span {
+        color: #fff;
+    }
+    .mini-header .header-text p {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 820px) {
+    .mini-header .header-text {
+        top: 65% !important;
+        transform: perspective(1px) translateY(-60%) !important;
+    }
+        .mini-header .header-text h1 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+    .mini-header .header-text p {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 765px) {
+    .mini-header {
+        margin-bottom: 100px;
+    }
+    .mini-header .header-text {
+        top: 50% !important;
+        transform: perspective(1px) translateY(-50%) !important;
+        text-align: center;
+    }
+    .mini-header .header-text .buttons {
+        display: none;
+    }
+    .mini-header .header-text h1 {
+        font-weight: 600;
+        font-size: 24px !important;
+        line-height: 30px !important;
+        margin-bottom: 30px !important;
+    }
+    .mini-header .header-text h1 span {
+        color: #fff;
+    }
+    .mini-header .header-text p {
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 411px) {
+    .mini-header .header-text {
+        top: 65% !important;
+        transform: perspective(1px) translateY(-50%) !important;
+        text-align: center;
+    }
+}
+
+@media (max-width:360px) {
+    .mini-header .header-text {
+        top: 65% !important;
+        transform: perspective(1px) translateY(-50%) !important;
+        text-align: center;
+    }
+}
+
 
 /* ---------------------------------------------
             Boosting Section
@@ -254,7 +380,8 @@
     }
     .card3 .checkout-container .test {
         position: relative;
-        top: 450px;
+        top: 0px !important;
+        left: 0px !important;
     }
     .card3 .services-container .test button {
         position: relative;
@@ -399,6 +526,9 @@
 /* Card 3 - Payments Status */
 
 .card3 .checkout-container .test {
+    position: relative;
+    top: -500px;
+    left: 300px;
     height: 500px;
 }
 
@@ -439,7 +569,7 @@
 }
 
 .card3 .services-container .test .now {
-    font-size: 32px;
+    font-size: 24px;
     color: #a759d1;
 }
 

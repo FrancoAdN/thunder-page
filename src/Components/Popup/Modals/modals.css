@@ -94,3 +94,8 @@
     width: 50px;
     height: 50px;
 }
+
+.alert {
+    margin-top: 20px;
+    color: #ce110a;
+}
