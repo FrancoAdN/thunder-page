@@ -17,6 +17,8 @@ import jungler from './JUNGLER.png'
 import mid from './mid.png'
 import bot from './bot.png'
 import sup from './support.png'
+import Footer from '../Footer'
+import { parse } from 'graphql'
 
 export default function StepOne({ set }) {
 
@@ -28,7 +30,7 @@ export default function StepOne({ set }) {
         fromRank, setFromRank,
         toRank, setToRank,
         divFromRef, divToRef,
-        serverRef, modeRef, fastRef
+        serverRef, modeRef, fastRef, discordRef
     } = useContext(prov)
 
     const fromRef = useRef()
@@ -62,48 +64,66 @@ export default function StepOne({ set }) {
     useEffect(() => {
         if (champs.length === 0) {
             document.getElementById("checkChamps").checked = false
+        } else {
+            calculatePrice()
         }
     }, [champs])
+
+    useEffect(() => {
+        if (lanes.length !== 0)
+            calculatePrice()
+    }, [lanes])
 
     const handleFast = (e) => {
         fastRef.current = e.target.checked
         calculatePrice()
     }
 
+    const handleDiscord = (e) => {
+        discordRef.current = e.target.checked
+        calculatePrice()
+    }
+
     const pricing = [
-        { rank: 'Iron', price_per_div: 150, days_per_div: 0.5 },
-        { rank: 'Bronze', price_per_div: 250, days_per_div: 1 },
-        { rank: 'Silver', price_per_div: 350, days_per_div: 1.5 },
-        { rank: 'Gold', price_per_div: 450, days_per_div: 1.5 },
-        { rank: 'Platinium', price_per_div: 650, days_per_div: 2 },
+        { rank: 'Iron', price_per_div: 150, days_per_div: 2 },
+        { rank: 'Bronze', price_per_div: 250, days_per_div: 2 },
+        { rank: 'Silver', price_per_div: 350, days_per_div: 2 },
+        { rank: 'Gold', price_per_div: 450, days_per_div: 2 },
+        { rank: 'Platinium', price_per_div: 650, days_per_div: 3 },
         { rank: 'Diamond' },
         { rank: 'Master' }
     ]
 
     const calculatePrice = () => {
 
+
         const fromIndex = getIndexOfRank(fromRef.current)
         const toIndex = getIndexOfRank(toRef.current)
 
         setPrice(0)
+        setDays(0)
         const intDivFrom = parseInt(divFromRef.current)
         const intDivTo = parseInt(divToRef.current)
         if (fromIndex <= toIndex) {
             if (fromIndex !== toIndex && toIndex < 5) {
                 let currPrice = 0
-
+                let currDays = 0
                 for (let i = fromIndex + 1; i < toIndex; i++) {
                     currPrice += pricing[i].price_per_div * 4
+                    currDays += pricing[i].days_per_div * 4
                 }
 
                 currPrice += pricing[fromIndex].price_per_div * intDivFrom
+                currDays += pricing[fromIndex].days_per_div * intDivFrom
 
                 currPrice += pricing[toIndex].price_per_div * (4 - intDivTo)
-
+                currDays += pricing[toIndex].days_per_div * (4 - intDivTo)
+                setDays(currDays)
                 setPrice(currPrice)
 
             } else if (fromIndex === toIndex && toIndex < 5) {
                 if (intDivFrom > intDivTo) {
+                    setDays(pricing[fromIndex].days_per_div * (intDivFrom - intDivTo))
                     setPrice(pricing[fromIndex].price_per_div * (intDivFrom - intDivTo))
                 }
 
@@ -111,24 +131,31 @@ export default function StepOne({ set }) {
 
                 if (fromIndex !== 5) {
                     let currPrice = 0
+                    let currDays = 0
 
                     for (let i = fromIndex + 1; i < 5; i++) {
                         currPrice += pricing[i].price_per_div * 4
+                        currDays += pricing[i].days_per_div * 4
                     }
 
                     if (toIndex === 5) {
                         if (intDivTo === 3) {
                             currPrice += 1500
+                            currDays += 4
                         } else if (intDivTo === 2) {
                             currPrice += 3500
+                            currDays += 8
                         } else if (intDivTo === 1) {
                             currPrice += 6000
+                            currDays += 12
                         }
                     } else if (toIndex === 6) {
                         currPrice += 9500
+                        currDays += 17
                     }
 
                     currPrice += pricing[fromIndex].price_per_div * intDivFrom
+                    currDays += pricing[fromIndex].days_per_div * intDivFrom
 
                     setPrice(currPrice)
 
@@ -138,33 +165,44 @@ export default function StepOne({ set }) {
 
                         if (intDivFrom === 4 && intDivTo < intDivFrom) {
                             if (intDivTo === 3) {
+                                setDays(4)
                                 setPrice(1500)
                             } else if (intDivTo === 2) {
                                 setPrice(3500)
+                                setDays(8)
                             } else if (intDivTo === 1) {
                                 setPrice(6000)
+                                setDays(12)
                             }
                         } else if (intDivFrom === 3 && intDivTo < intDivFrom) {
                             if (intDivTo === 2) {
+                                setDays(4)
                                 setPrice(2000)
                             } else if (intDivTo === 1) {
                                 setPrice(4500)
+                                setDays(4)
                             }
                         } else if (intDivFrom === 2 && intDivTo < intDivFrom) {
                             setPrice(2500)
+                            setDays(4)
                         } else {
+                            setDays(0)
                             setPrice(0)
                         }
 
                     } else {
                         if (intDivFrom === 4) {
                             setPrice(9500)
+                            setDays(17)
                         } else if (intDivFrom === 3) {
                             setPrice(8000)
+                            setDays(13)
                         } else if (intDivFrom === 2) {
                             setPrice(6000)
+                            setDays(9)
                         } else {
                             setPrice(3500)
+                            setDays(5)
                         }
                     }
 
@@ -174,15 +212,28 @@ export default function StepOne({ set }) {
         }
 
         if (serverRef.current === 'BR') {
-            setPrice(price => price + (price / 2))
+            setPrice(price => parseInt(price + (price * 0.1)))
         }
 
         if (modeRef.current === 'DUO') {
-            setPrice(price => price * 2)
+            setPrice(price => parseInt(price + (price * 0.15)))
         }
 
         if (fastRef.current) {
-            setPrice(price => price + (price / 2))
+            setPrice(price => parseInt(price + (price * 0.3)))
+            setDays(days => parseInt(days - (days * 0.3)))
+        }
+
+        if (discordRef.current) {
+            setPrice(price => parseInt(price + (price * 0.15)))
+        }
+
+        if (lanes.length !== 0) {
+            setPrice(price => parseInt(price + (price * 0.1)))
+        }
+
+        if (champs.length !== 0) {
+            setPrice(price => parseInt(price + (price * 0.1)))
         }
 
 
@@ -272,176 +323,178 @@ export default function StepOne({ set }) {
 
     }
 
-         return (
+    return (
+        <div>
+            <section id="grilla">
+                <section id="card1" className="card1">
+                    <h1 className="title"> Selecciona tu <span> liga actual </span> </h1>
+                    <div className="form">
+                        <div className="img-rank">
+                            <img src={from} className="division"></img> { /* Aca va la imagen de los rank */}
+                        </div>
+                        <div className="container-rank">
+                            <select name="ranks" value={fromRank} onChange={(e) => {
+                                setFromRank(e.target.value)
+                                fromRef.current = e.target.value
+                                handleSelect(e, setFrom, setVisFrom)
 
-                <section id="grilla">
-                    <section id="card1" className="card1"> 
-                        <h1 className="title"> Selecciona tu <span> liga actual </span> </h1>
-                        <div className="form">
-                            <div className="img-rank">
-                                <img src="" className="division"></img> { /* Aca va la imagen de los rank */ }
-                            </div>
-                            <div className="container-rank">				
-                             <select name="ranks" value={fromRank} onChange={(e) => {
-                                 setFromRank(e.target.value)
-                                 fromRef.curent = e.target.value
-                                 handleSelect(e, setFrom, setVisFrom)
-
-                             }}>
-                                    <option value="1">Iron</option> 
-                                    <option value="2">Bronce</option> 
-                                    <option value="3">Silver</option>
-                                    <option value="10">Gold</option> 
-                                    <option value="11">Platino</option> 
-                                    <option value="12">Diamond</option> 
-                                  </select>
-                                 <div className="divition" style={{ visibility: visFrom }}>                          
-                                    <select name="divisions" onChange={(e) => changeDivision(e, divFromRef)}>
-                                    <option value="1"> Division I </option> 
-                                    <option value="2"> Division II </option> 
+                            }}>
+                                <option value="Iron">Iron</option>
+                                <option value="Bronze">Bronze</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Gold">Gold</option>
+                                <option value="Platinium">Platinium</option>
+                                <option value="Diamond">Diamond</option>
+                            </select>
+                            <div className="divition" style={{ visibility: visFrom }}>
+                                <select name="divisions" onChange={(e) => changeDivision(e, divFromRef)}>
+                                    <option value="4">Division IV </option>
                                     <option value="3"> Division III </option>
-                                    <option value="10">Division IV </option> 
-                                 </select>
-                                 </div>
-                                <select name="lp">
-                                    <option value="1"> 0  - 25 LP </option> 
-                                    <option value="2"> 25 - 50 LP </option> 
-                                    <option value="3"> 50 - 75 LP </option>
-                                    <option value="10">75 - 100 LP </option> 
+                                    <option value="2"> Division II </option>
+                                    <option value="1"> Division I </option>
+
+                                </select>
+                            </div>
+                            <select name="lp">
+                                <option value="1"> 0  - 25 LP </option>
+                                <option value="2"> 25 - 50 LP </option>
+                                <option value="3"> 50 - 75 LP </option>
+                                <option value="10">75 - 100 LP </option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="card2" className="card2">
+                    <h1 className="title"> Selecciona tu <span> liga deseada </span> </h1>
+                    <div className="form">
+                        <div className="img-rank">
+                            <img src={to} className="division"></img> { /* Aca va la imagen de los rank */}
+                        </div>
+                        <div className="container-rank">
+                            <select name="ranks" value={toRank} onChange={(e) => {
+                                setToRank(e.target.value)
+                                toRef.current = e.target.value
+                                handleSelect(e, setTo, setVisTo)
+                            }}>
+                                <option value="Iron">Iron</option>
+                                <option value="Bronze">Bronze</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Gold">Gold</option>
+                                <option value="Platinium">Platinium</option>
+                                <option value="Diamond">Diamond</option>
+                                <option value="Master">Master</option>
+                            </select>
+                            <div className="divition" style={{ visibility: visTo }}>
+                                <select name="divisions" onChange={(e) => changeDivision(e, divToRef)}>
+                                    <option value="10">Division IV </option>
+                                    <option value="3"> Division III </option>
+                                    <option value="2"> Division II </option>
+                                    <option value="1"> Division I </option>
                                 </select>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <section id="card2" className="card2"> 
-                        <h1 className="title"> Selecciona tu <span> liga deseada </span> </h1>
-                        <div className="form">
-                            <div className="img-rank">
-                                <img src="" className="division"> </img> { /* Aca va la imagen de los rank */ }
-                            </div>
-                            <div className="container-rank">				
-                             <select name="ranks" value={toRank} onChange={(e) => {
-                                setToRank(e.target.value)
-                                 toRef.current = e.target.value
-                                 handleSelect(e, setTo, setVisTo)
-                             }}>
-                                    <option value="1">Iron</option> 
-                                    <option value="2">Bronce</option> 
-                                    <option value="3">Silver</option>
-                                    <option value="10">Gold</option> 
-                                    <option value="11">Platino</option> 
-                                    <option value="12">Diamond</option> 
-                                    <option value="13">Master</option>
-                                    <option value="14">Grand Master</option>
-                                    <option value="15">Challenger</option>
-                             </select>
-                                <div className="divition" style={{ visibility: visTo }}> 
-                                <select name="divisions" onChange={(e) => changeDivision(e, divToRef)}>
-                                    <option value="1"> Division I </option> 
-                                    <option value="2"> Division II </option> 
-                                    <option value="3"> Division III </option>
-                                    <option value="10">Division IV </option> 
-                                 </select>
-                                 </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="card3" className="card3"> 
-                        <h1 className="title"> Configuracion de boost </h1>
-                        <hr/>
-                        <div className="checkout-container">
-                            <div className="services-container">
-                                <div className="configuration">
-                                    <h1 className=""> Opciones de boost </h1>
-                                <div className="server"> 
-                                    <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"> </img>
+                <section id="card3" className="card3">
+                    <h1 className="title"> Configuracion de boost </h1>
+                    <hr />
+                    <div className="checkout-container">
+                        <div className="services-container">
+                            <div className="configuration">
+                                <h1 className=""> Opciones de boost </h1>
+                                <div className="server">
+                                    <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"></img>
                                     <p> Servidor: </p>
-                                     <select name="servidores" onChange={(e) => {
-                                         serverRef.current = e.target.value
-                                         calculatePrice()
-                                     }}>
-                                        <option value="1"> LAS </option> 
-                                        <option value="2"> BR (+10%)</option> 
+                                    <select name="servidores" onChange={(e) => {
+                                        serverRef.current = e.target.value
+                                        calculatePrice()
+                                    }}>
+                                        <option value="LAS"> LAS </option>
+                                        <option value="BR"> BR (+10%)</option>
                                     </select>
                                 </div>
-                                <div className="server"> 
-                                    <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"> </img>
+                                <div className="server">
+                                    <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon" />
                                     <p> Modo Queue: </p>
                                     <select name="modo" onChange={modeChange}>
-                                        <option value="1"> Solo </option> 
-                                        <option value="2"> Duo (+15%)</option> 
-                                        <option value="3"> Flexible </option>
+                                        <option value="SOLO"> Solo </option>
+                                        <option value="DUO"> Duo (+15%)</option>
+                                        <option value="FLEXIBLE"> Flexible </option>
                                     </select>
                                 </div>
-                                <hr>
-                                <div className="fast"> 
+                                <hr />
+                                <div className="fast">
                                     <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"></img>
                                     <p> Servicio rapido: <span>+30%</span> </p>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleFast}> </input>
-                                    <div className="streaming"> 
+                                    <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleFast} />
+                                    <div className="streaming">
                                         <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"></img>
                                         <p> Discord Stream: <span> +15% </span> </p>
-                                        <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox"></input>
+                                        <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleDiscord}></input>
                                     </div>
                                 </div>
-                                <hr/>
+                                <hr />
                                 <div className="extra">
-                                    <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon"> </img>
+                                    <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon" />
                                     <p> Fijar campeones: <span> +10% </span></p>
-                                         <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleOpenChamps}></input>
-                                         <ModalChamps openChamps={openChamps} setOpenChamps={setOpenChamps} setChamps={setChamps} champions={champs} lanes={lanes} ></ModalChamps>
+                                    <input type="checkbox" id="checkChamps" value="first_checkbox" className="checkbox" onChange={handleOpenChamps}></input>
+                                    <ModalChamps openChamps={openChamps} setOpenChamps={setOpenChamps} setChamps={setChamps} champions={champs} lanes={lanes} ></ModalChamps>
                                     <div className="image-container">
-                                     {
-                                        champs.map(champ => <img src={champ.img} className="image-champ" alt="" />)            
-                                     }
-                                </div>
+                                        {
+                                            champs.map(champ => <img src={champ.img} className="image-champ" alt="" />)
+                                        }
+                                    </div>
                                     <div className="extra2">
                                         <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon" />
                                         <p>Fijar roles: <span> +10% </span></p>
-                                             <input type="checkbox" id="cbox1" value="first_checkbox" className="checkbox" onChange={handleLanes} />
-                                             <ModalLanes openLanes={openLanes} setOpenLanes={setOpenLanes} setLanes={setLanes} lanes={lanes} /> 
+                                        <input type="checkbox" id="checkLanes" value="first_checkbox" className="checkbox" onChange={handleLanes} />
+                                        <ModalLanes openLanes={openLanes} setOpenLanes={setOpenLanes} setLanes={setLanes} lanes={lanes} />
                                         <div className="image-container">
                                             {
-                                                lanes.map(role => <img key={role} src={getLaneImage(role)} alt={role} className="image-champ" />)         
+                                                lanes.map(role => <img key={role} src={getLaneImage(role)} alt={role} className="image-champ" />)
                                             }
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div className="test">
                                     <h1> Informacion de boost </h1>
                                     <div className="price">
-                                             <a> Precio total </a>
-                                             {price ? <p className="old"> <del> ${price + (price * 0.2)} ARS </del></p> : <p></p> }
+                                        <a> Precio total </a>
+                                        {price ? <p className="old"> <del> ${price + (price * 0.2)} ARS </del></p> : <p></p>}
                                         <p className="now"> ${price} ARS </p>
-                                        <hr/>
+                                        <hr />
                                     </div>
                                     <div className="time">
                                         <a> Tiempo estimado </a>
                                         <p className="count"> {days} </p>
                                         <p> Dias </p>
-                                        <hr/>
+                                        <hr />
                                     </div>
                                     <div className="services">
-                                        <p className="title2">Servicios adicionales <br/> con tu compra </p>
-                                        <p> <img src="./verify.png" className="icon"></img> Soporte en Discord 24/7 </p> { /* Aca va la imagen verify */ }
+                                        <p className="title2">Servicios adicionales <br /> con tu compra </p>
+                                        <p> <img src="./verify.png" className="icon"></img> Soporte en Discord 24/7 </p> { /* Aca va la imagen verify */}
                                         <p> <img src="./verify.png" className="icon"></img> Rango Vip en nuestro Discord </p>
                                         <p> <img src="./verify.png" className="icon"></img> Chat con tu Booster </p>
                                         <p> <img src="./verify.png" className="icon"></img> Acceso a beneficios </p>
                                         <p> <img src="./verify.png" className="icon"></img> 1 Sesion de Coaching gratis </p>
-                                        <hr/>
+                                        <hr />
                                     </div>
                                     <div className="continue" style={{ visibility: cont }} onClick={() => set(true)}>
-                                         <button> Continuar </button>  
+                                        <button> Continuar </button>
                                     </div>
                                 </div>
-                            </hr>
+                                <hr />
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </section>
+                </section>
+            </section >
+            {/* <Footer /> */}
+        </div>
+
 
     )
 }

@@ -15,6 +15,7 @@ export default function StateProvider(props) {
     const serverRef = useRef()
     const modeRef = useRef()
     const fastRef = useRef()
+    const discordRef = useRef()
     //STEP 2
     const [summoners, setSummoners] = useState('')
     const [username, setUsername] = useState('')
@@ -41,7 +42,7 @@ export default function StateProvider(props) {
         toRank, setToRank,
         champs, setChamps,
         lanes, setLanes,
-        divFromRef, divToRef,
+        divFromRef, divToRef, discordRef,
         serverRef, modeRef, fastRef,
         //STEP 2
         summoners, setSummoners,
