@@ -482,7 +482,7 @@ export default function StepOne({ set }) {
                                         <p> <img src="./verify.png" className="icon"></img> 1 Sesion de Coaching gratis </p>
                                         <hr />
                                     </div>
-                                    <div className="continue" style={{ visibility: cont }} onClick={() => set(true)}>
+                                    <div className="continue" style={{ visibility: cont }} onClick={() => set("2")}>
                                         <button> Continuar </button>
                                     </div>
                                 </div>
