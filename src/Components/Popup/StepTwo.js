@@ -3,6 +3,7 @@ import { prov } from './_useHook'
 import Header from './Header'
 import './style.css'
 import './responsive.css'
+import MiniHeader from './MiniHeader'
 import payments from './payments.png'
 import payments2 from './payments2.png'
 import brubank from './payments-img/brubank.png'
@@ -129,6 +130,9 @@ export default function StepTwo({ set }) {
 
     return (
 
+        <div>
+            <Header/>
+            <MiniHeader/>
         <section id="steptwo" onSubmit= {formSubmit}>
             <div id="card4" class="card4"> 
                 <div class="title">
@@ -213,5 +217,6 @@ export default function StepTwo({ set }) {
                 </div>
          </section>
 
+         </div>
     )
 }

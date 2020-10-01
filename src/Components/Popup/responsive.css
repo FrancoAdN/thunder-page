@@ -90,8 +90,8 @@
     }
     .card3 .test {
         position: relative;
-        left: -180px;
-        top: 520px;
+        left: 0px !important;
+        top: 0px !important;
     }
 }
 
@@ -181,8 +181,8 @@
     }
     .card3 .test {
         position: relative;
-        left: -210px;
-        top: 520px;
+        left: 0px !important;
+        top: 0px !important;
     }
 }
 
@@ -272,8 +272,8 @@
     }
     .card3 .test {
         position: relative;
-        left: -260px;
-        top: 520px;
+        left: 0px !important;
+        top: 0px !important;
     }
 }
 
@@ -362,8 +362,8 @@
     }
     .card3 .test {
         position: relative;
-        left: -260px;
-        top: 520px;
+        left: 0px !important;
+        top: 0px !important;
     }
 }
 
@@ -452,12 +452,12 @@
     }
     .card3 .test {
         position: relative;
-        left: -280px;
-        top: 520px;
+        left: 0px !important;
+        top: 0px !important;
     }
 }
 
-@media (max-width:360px) {
+@media (min-width: 360px) and (max-width:374px) {
     #grilla {
         display: grid;
         grid-template-areas:
@@ -547,7 +547,7 @@
     }
 }
 
-@media (max-width:320px) {
+@media (min-width:320px) and (max-width: 359px) {
     #grilla {
         display: grid;
         grid-template-areas:

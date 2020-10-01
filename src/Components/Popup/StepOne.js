@@ -13,12 +13,14 @@ import rank8 from './ranks-lol/8.png'
 import rank9 from './ranks-lol/9.png'
 import { prov } from './_useHook'
 import top from './top.png'
+import verifry from './verify.png'
 import jungler from './JUNGLER.png'
 import mid from './mid.png'
 import bot from './bot.png'
 import sup from './support.png'
 import Footer from '../Footer'
 import { parse } from 'graphql'
+import MiniHeader from './MiniHeader'
 
 export default function StepOne({ set }) {
 
@@ -212,16 +214,16 @@ export default function StepOne({ set }) {
         }
 
         if (serverRef.current === 'BR') {
-            setPrice(price => parseInt(price + (price * 0.1)))
+            setPrice(price => parseInt(price + (price * 0.25)))
         }
 
         if (modeRef.current === 'DUO') {
-            setPrice(price => parseInt(price + (price * 0.15)))
+            setPrice(price => parseInt(price + (price * 0.5)))
         }
 
         if (fastRef.current) {
-            setPrice(price => parseInt(price + (price * 0.3)))
-            setDays(days => parseInt(days - (days * 0.3)))
+            setPrice(price => parseInt(price + (price * 0.5)))
+            setDays(days => parseInt(days - (days * 0.5)))
         }
 
         if (discordRef.current) {
@@ -229,11 +231,11 @@ export default function StepOne({ set }) {
         }
 
         if (lanes.length !== 0) {
-            setPrice(price => parseInt(price + (price * 0.1)))
+            setPrice(price => parseInt(price + (price * 0.25)))
         }
 
         if (champs.length !== 0) {
-            setPrice(price => parseInt(price + (price * 0.1)))
+            setPrice(price => parseInt(price + (price * 0.25)))
         }
 
 
@@ -325,6 +327,8 @@ export default function StepOne({ set }) {
 
     return (
         <div>
+            <Header/>
+            <MiniHeader/>
             <section id="grilla">
                 <section id="card1" className="card1">
                     <h1 className="title"> Selecciona tu <span> liga actual </span> </h1>
@@ -412,7 +416,7 @@ export default function StepOne({ set }) {
                                         calculatePrice()
                                     }}>
                                         <option value="LAS"> LAS </option>
-                                        <option value="BR"> BR (+10%)</option>
+                                        <option value="BR"> BR (+25%)</option>
                                     </select>
                                 </div>
                                 <div className="server">
@@ -420,7 +424,7 @@ export default function StepOne({ set }) {
                                     <p> Modo Queue: </p>
                                     <select name="modo" onChange={modeChange}>
                                         <option value="SOLO"> Solo </option>
-                                        <option value="DUO"> Duo (+15%)</option>
+                                        <option value="DUO"> Duo (+50%)</option>
                                         <option value="FLEXIBLE"> Flexible </option>
                                     </select>
                                 </div>
@@ -438,7 +442,7 @@ export default function StepOne({ set }) {
                                 <hr />
                                 <div className="extra">
                                     <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon" />
-                                    <p> Fijar campeones: <span> +10% </span></p>
+                                    <p> Fijar campeones: <span> +25% </span></p>
                                     <input type="checkbox" id="checkChamps" value="first_checkbox" className="checkbox" onChange={handleOpenChamps}></input>
                                     <ModalChamps openChamps={openChamps} setOpenChamps={setOpenChamps} setChamps={setChamps} champions={champs} lanes={lanes} ></ModalChamps>
                                     <div className="image-container">
@@ -448,7 +452,7 @@ export default function StepOne({ set }) {
                                     </div>
                                     <div className="extra2">
                                         <img src="https://img.icons8.com/color/48/000000/league-of-legends.png" className="icon" />
-                                        <p>Fijar roles: <span> +10% </span></p>
+                                        <p>Fijar roles: <span> +25% </span></p>
                                         <input type="checkbox" id="checkLanes" value="first_checkbox" className="checkbox" onChange={handleLanes} />
                                         <ModalLanes openLanes={openLanes} setOpenLanes={setOpenLanes} setLanes={setLanes} lanes={lanes} />
                                         <div className="image-container">
@@ -475,26 +479,22 @@ export default function StepOne({ set }) {
                                     </div>
                                     <div className="services">
                                         <p className="title2">Servicios adicionales <br /> con tu compra </p>
-                                        <p> <img src="./verify.png" className="icon"></img> Soporte en Discord 24/7 </p> { /* Aca va la imagen verify */}
-                                        <p> <img src="./verify.png" className="icon"></img> Rango Vip en nuestro Discord </p>
-                                        <p> <img src="./verify.png" className="icon"></img> Chat con tu Booster </p>
-                                        <p> <img src="./verify.png" className="icon"></img> Acceso a beneficios </p>
-                                        <p> <img src="./verify.png" className="icon"></img> 1 Sesion de Coaching gratis </p>
+                                        <p> <img src={verifry} className="icon"></img> Soporte en Discord 24/7 </p> { /* Aca va la imagen verify */}
+                                        <p> <img src={verifry}  className="icon"></img> Rango Vip en nuestro Discord </p>
+                                        <p> <img src={verifry}  className="icon"></img> Chat con tu Booster </p>
+                                        <p> <img src={verifry}  className="icon"></img> Acceso a beneficios </p>
                                         <hr />
                                     </div>
                                     <div className="continue" style={{ visibility: cont }} onClick={() => set(true)}>
                                         <button> Continuar </button>
                                     </div>
                                 </div>
-                                <hr />
                             </div>
                         </div>
                     </div>
                 </section>
             </section >
-            {/* <Footer /> */}
         </div>
-
 
     )
 }
