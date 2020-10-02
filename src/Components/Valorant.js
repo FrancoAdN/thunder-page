@@ -26,7 +26,7 @@ export default function Valorant() {
                                     <h5 className="card2-title">Valorant Coaching</h5>
                                     <p className="card2-text">Te brindamos ayuda y consejos para mejorar tu experiencia de
                                     juego.</p>
-                                    <button className="btn btn-primary">¡Contratar!</button>
+                                    <button className="btn btn-primary">¡Proximamente!</button>
                                 </div>
                             </div>
                             {/* <!-- card2 --> */}
@@ -38,7 +38,7 @@ export default function Valorant() {
                                     <h5 className="card2-title">Valorant Boosting</h5>
                                     <p className="card2-text">Nos encargamos de alcanzar tu rango deseado y mejorar tus
                                     estadisticas.</p>
-                                    <button className="btn btn-primary">¡Contratar!</button>
+                                    <button className="btn btn-primary">¡Proximamente!</button>
                                 </div>
                             </div>
                             {/* <!-- card3 --> */}
@@ -50,7 +50,7 @@ export default function Valorant() {
                                     <h5 className="card2-title">Valorant Training</h5>
                                     <p className="card2-text">Te brindamos distintas tecnicas y entrenamientos diarios para dar
                                     tu 100%.</p>
-                                    <button className="btn btn-primary">¡Contratar!</button>
+                                    <button className="btn btn-primary">¡Proximamente!</button>
                                 </div>
                             </div>
                         </div>

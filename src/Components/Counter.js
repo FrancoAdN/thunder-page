@@ -7,7 +7,7 @@ export default function Counter() {
                 <div className="row">
                     <div className="col-lg-3 col-md-6">
                         <div className="single-counter">
-                            <h1 className="counter">17%</h1>
+                            <h1 className="counter">17</h1>
                             <p> Nuevos clientes </p>
                         </div>
                     </div>

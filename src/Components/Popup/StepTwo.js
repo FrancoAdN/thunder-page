@@ -134,7 +134,7 @@ export default function StepTwo({ set }) {
         <div>
             <Header/>
             <MiniHeader/>
-        <section id="steptwo" onSubmit= {formSubmit}>
+        <form id="steptwo" onSubmit= {formSubmit}>
             <div id="card4" class="card4"> 
                 <div class="title">
                     <h1> <span> Completar </span> con <span > sus </span> datos </h1>
@@ -211,7 +211,7 @@ export default function StepTwo({ set }) {
                         </div>
                     </div>
                 </div>
-         </section>
+         </form>
 
          </div>
     )

@@ -26,7 +26,7 @@ export default function FeatItem() {
                     <div className="col-lg-1"></div>
                     <div className="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big"
                         data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                        <video src={video} type="video/webm" autoPlay controls className="vid-post rounded" alt="" />
+                        <video src={video} type="video/webm" autoPlay muted controls className="vid-post rounded" alt="" />
                     </div>
                 </div>
             </div>

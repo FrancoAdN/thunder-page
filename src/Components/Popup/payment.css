@@ -1,0 +1,169 @@
+.paymentForm {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: 305px;
+    grid-template-rows: 90px 90px 90px;
+    max-width: 310px;
+    margin-left: 40px;
+    margin-top: 40px;
+    height: 600px;
+
+    border-radius: 10px;
+
+    color: #707070;
+    background-color: rgb(245, 245, 245);
+
+
+    box-shadow: 1px -1px 0px 7px rgba(242,242,242,0.75);
+    -webkit-box-shadow: 1px -1px 0px 7px rgba(242,242,242,0.75);
+    -moz-box-shadow: 1px -1px 0px 7px rgba(242,242,242,0.75);
+}
+
+.paymentForm label {
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.paymentForm input {
+    padding: 5px;
+    font-size: 16px;
+    width: 98%;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    margin-left: 5px;
+    outline: none;
+}
+
+.paymentForm input:hover {
+    border: 1px solid #744894;
+}
+
+input::placeholder {
+    font-size: 16px;
+}
+
+.paymentForm .paymentHeader {
+    position: relative;
+    top: -50px;
+}
+
+.paymentForm .payHeader {
+    position: relative;
+    top: -75px;
+}
+
+.paymentTitle {
+    text-align: center;
+    height: 39px;
+    padding: 7px;
+    font-size: 20px;
+}
+
+.paymentTitle2 {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.paymentForm .typeDoc {
+    position: relative;
+    top: 8px;
+}
+
+.paymentForm .typeDoc select {
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+}
+
+.paymentForm .typeDoc select:hover {
+    border: 1px solid #744894;
+}
+
+.paymentForm .numberDoc {
+    position: relative;
+    top: -51px;
+    left: 100px;
+    width: 200px;
+}
+
+.paymentForm .paymentUser {
+    width: 305px;
+}
+
+.paymentForm .paymentCardNumber {
+    width: 305px;
+}
+
+.paymentForm .paymentExpire {
+    display: grid;
+    grid-template-columns: 60px 60px;
+}
+
+.paymentForm .paymentExpire .año {
+    position: relative;
+    top: -36px;
+    left: 75px;
+}
+
+.paymentForm .paymentCode {
+    position: relative;
+    top: -102px;
+    left: 200px;
+    width: 100px;
+}
+
+.paymentForm .payBank {
+    position: relative;
+    top: -80px;
+}
+
+.paymentForm .payBank select {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.paymentForm .payDues {
+    position: relative;
+    top: -80px;
+}
+
+.paymentForm .payDues select {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    padding: 6px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.paymentForm button {
+    position: relative;
+    top: -90px;
+    left: 50px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #A82CDA;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.paymentForm button:hover {
+    background-color: #744894;
+}
+

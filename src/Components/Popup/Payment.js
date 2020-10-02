@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import { prov } from './_useHook'
 import axios from 'axios'
+import './payment.css'
 
 
 
@@ -139,61 +140,61 @@ export default function Payment() {
 
 
     return (
-        <form action="" method="post" id="paymentForm" onSubmit={(e) => e.preventDefault()}>
-            <h3>Detalles del comprador</h3>
-            <div>
-                {/* <div>
+        <form className="paymentForm" action="" method="post" id="paymentForm" onSubmit={(e) => e.preventDefault()}>
+            <h3 className="paymentTitle">Detalles del comprador</h3>
+            <div className="paymentHeader">
+                <div>
                     <label htmlFor="email">E-mail</label>
                     <input id="email" name="email" type="text" value={email} />
-                </div> */}
-                <div>
-                    <label htmlFor="docType">Tipo de documento</label>
+                </div> 
+                <div className="typeDoc">
+                    <label htmlFor="docType"></label>
                     <select id="docType" name="docType" data-checkout="docType" type="text"></select>
                 </div>
-                <div>
-                    <label htmlFor="docNumber">Número de documento</label>
-                    <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text" />
+                <div className="numberDoc">
+                    <label htmlFor="docNumber"></label>
+                    <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text" placeholder="Número de documento"/>
                 </div>
             </div>
-            <h3>Detalles de la tarjeta</h3>
-            <div>
-                <div>
+            <h3 className="paymentTitle2">Detalles de la tarjeta</h3>
+            <div className="payHeader">
+                <div className="paymentUser">
                     <label htmlFor="cardholderName">Titular de la tarjeta</label>
-                    <input id="cardholderName" data-checkout="cardholderName" type="text" />
+                    <input id="cardholderName" type="text" data-checkout="cardholderName" type="text" placeholder=""/>
                 </div>
-                <div>
-                    <label htmlFor="">Fecha de vencimiento</label>
-                    <div>
-                        <input type="text" placeholder="MM" id="cardExpirationMonth" data-checkout="cardExpirationMonth"
-                            onPaste={() => { return false }}
-                            onCopy={() => { return false }} onCut={() => { return false }}
-                            onDrag={() => { return false }} onDrop={() => { return false }} autoComplete="off" />
-                        <span className="date-separator">/</span>
-                        <input type="text" placeholder="YY" id="cardExpirationYear" data-checkout="cardExpirationYear"
-                            onPaste={() => { return false }}
-                            onCopy={() => { return false }} onCut={() => { return false }}
-                            onDrag={() => { return false }} onDrop={() => { return false }} autoComplete="off" />
-                    </div>
-                </div>
-                <div>
+                <div className="paymentCardNumber">
                     <label htmlFor="cardNumber">Número de la tarjeta</label>
-                    <input type="text" id="cardNumber" data-checkout="cardNumber"
+                    <input type="text" id="cardNumber" data-checkout="cardNumber" placeholder="0000 0000 0000 0000"
                         onPaste={() => { return true }}
                         onCopy={() => { return false }} onCut={() => { return false }}
                         onDrag={() => { return false }} onDrop={() => { return false }} autoComplete="off" />
                 </div>
                 <div>
-                    <label htmlFor="securityCode">Código de seguridad</label>
-                    <input id="securityCode" data-checkout="securityCode" type="text"
+                    <label htmlFor="">Fecha de vencimiento</label>
+                    <div className="paymentExpire">
+                        <input className="mes" type="text" placeholder="MM" id="cardExpirationMonth" data-checkout="cardExpirationMonth"
+                            onPaste={() => { return false }}
+                            onCopy={() => { return false }} onCut={() => { return false }}
+                            onDrag={() => { return false }} onDrop={() => { return false }} autoComplete="off" />
+                        <span className="date-separator"></span>
+                        <input className="año" type="text" placeholder="AA" id="cardExpirationYear" data-checkout="cardExpirationYear"
+                            onPaste={() => { return false }}
+                            onCopy={() => { return false }} onCut={() => { return false }}
+                            onDrag={() => { return false }} onDrop={() => { return false }} autoComplete="off" />
+                    </div>
+                </div>
+                <div className="paymentCode"> 
+                    <label htmlFor="securityCode">CVC</label>
+                    <input id="securityCode" data-checkout="securityCode" type="text" placeholder="000"
                         onPaste={() => { return false }}
                         onCopy={() => { return false }} onCut={() => { return false }}
                         onDrag={() => { return false }} onDrop={() => { return false }} autoComplete="off" />
                 </div>
-                <div id="issuerInput">
+                <div className="payBank" id="issuerInput">
                     <label htmlFor="issuer">Banco emisor</label>
                     <select id="issuer" name="issuer" data-checkout="issuer"></select>
                 </div>
-                <div>
+                <div className="payDues">
                     <label htmlFor="installments">Cuotas</label>
                     <select type="text" id="installments" name="installments"></select>
                 </div>
@@ -209,3 +210,4 @@ export default function Payment() {
         </form>
     )
 }
+
