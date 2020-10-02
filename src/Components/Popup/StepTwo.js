@@ -8,6 +8,7 @@ import payments from './payments.png'
 import payments2 from './payments2.png'
 import brubank from './payments-img/brubank.png'
 import rapipago from './payments-img/rapipago.png'
+import verify from './verify.png'
 
 export default function StepTwo({ set }) {
 
@@ -166,18 +167,13 @@ export default function StepTwo({ set }) {
                     </div>
                     <div class="payment-metod">
                         <div class="title">
-                            <h1> Elija su forma de pago </h1>
+                            <h1> Metodos de pago disponible </h1>
                             <p> Si no encuentra su metodo de pago disponible, consultenos por el mismo a traves de <span> <a href="https://discord.gg/CrxGDbF"> Discord.</a> </span>                    </p>
                         </div>
                         <div class="payment-options">
-                            <input type="radio" id="male" name="gender" value=""/>
-                            <label for="male"> Mercado pago (Tarjeta de debito o credito / Efectivo)</label><br/>
-                            <input type="radio" id="female" name="gender" value=""/>
-                            <label for="female"> Transferencia bancaria por CVU (6% de descuento en el pago)</label><br/>
-                            <input type="radio" id="male" name="gender" value="male"/>
-                            <label for="male"> Paypal (6% de descuento en el pago) </label><br/>
-                            <input type="radio" id="other" name="gender" value="other"/>
-                            <label for="other">Otro (Consultar por su medio de pago disponible)</label>
+                            <p> El método de pago por defecto es con tarjeta de débito o crédito a través de nuestra plataforma. Si usted
+                                desea realizar el mismo por otro medio, como <a href="">Mercado Pago</a>, <a href="https://www.paypal.com/paypalme/eloboostlat">Paypal</a> o transferencia directa a CVU <a href="">( CVU: 0000003100014410698580)</a>, 
+                                puedes contactarnos en nuestras redes sociales o en nuestro Discord para brindar un mejor soporte con su </p>
                         </div>
                     </div>
                 </div>
@@ -205,9 +201,9 @@ export default function StepTwo({ set }) {
                             <p class="count"> {days} </p>
                             <p> Dias </p>
                             <hr/>
-                            <p> <img src="./img/verify.png" class="icon"/> Soporte al cliente 24/7 </p> { /* Aca va la imagen verify */ }
-                            <p> <img src="./img/verify.png" class="icon"/> Acceso a beneficios exclusivos </p> { /* Aca va la imagen verify */ }
-                            <p> <img src="./img/verify.png" class="icon"/> Servicios adicionales incluidos </p> { /* Aca va la imagen verify */ }
+                            <p> <img src={verify} class="icon"/> Soporte al cliente 24/7 </p> { /* Aca va la imagen verify */ }
+                            <p> <img src={verify} class="icon"/> Acceso a beneficios exclusivos </p> { /* Aca va la imagen verify */ }
+                            <p> <img src={verify} class="icon"/> Servicios adicionales incluidos </p> { /* Aca va la imagen verify */ }
                         </div>
                         <button className="pay" type="submit"> Pagar </button>
                         <div class="dude"> 

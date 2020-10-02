@@ -721,6 +721,8 @@ Step Two Section CSS
 }
 
 .card4 .title p {
+    font-size: 18px;
+    font-weight: 400;
     text-align: center;
     margin-top: 5px;
     color: gray;
@@ -784,63 +786,20 @@ Step Two Section CSS
     height: 260px;
 }
 
+.card4 .payment-metod p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .card4 .payment-metod .payment-options {
     margin-top: 30px;
     margin-left: 10px;
 }
 
-@media (max-width:360px) {
-    #steptwo {
-        display: grid;
-        grid-template-areas:
-        "card4"
-        "card4"
-        "card5"
-        "card5";
-        grid-template-columns: 100%;
-        grid-template-rows: 1000px 600px; 
-        margin-left: 0px !important;
-        margin-bottom: -200px;
-        margin-top: -100px !important;
-        justify-items: center;
-     }
-     .card4 {
-         height: 900px;
-     }
-     .card4 .form-container {
-        display: grid;
-        grid-template-columns: 360px !important;
-        grid-template-rows: 70px 70px 70px; 
-        margin-top: 10px;
-        justify-items: center;
-    }
-    .card4 .form-container .form {
-        width: 340px;
-        height: 300px;
-        margin-left: -5px;
-    }
-    .card4 .form-container input {
-        width: 350px;
-        height: 40px;
-    }
-    .card5 {
-        position: relative;
-        top: -320px;
-    }
-    .card5 .rank {
-        position: relative;
-        left: 80px;
-        margin-left: 0px !important;
-    }
-    .card5 .padd {
-        margin-left: 70px;
-    }
-    .card5 .dude {
-        position: relative;
-        left: 100px;
-        width: 300px;
-    }
+.card4 .payment-metod .payment-options a {  
+    color: #744894;
 }
+
 
 /* Card 5 */
 

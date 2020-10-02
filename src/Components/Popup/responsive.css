@@ -642,4 +642,423 @@
         Second Step Card Section
 ------------------------------------------------
 */
+@media (max-width:1024px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4 card5"
+        "card4 card5";
+        grid-template-columns: 500px 500px;
+        grid-template-rows: 600px 320px; 
+        margin-left: 20px;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 30px;
+        margin-left: 150px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 500px;
+        height: 300px;
+        margin-left: 0px;
+    }
+    .card4 .form-container input {
+        width: 450px;
+        height: 40px;
+    }
+    .card4 .payment-metod {
+        display: none;
+    }
+    .card5 {
+        position: relative;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 70px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
 
+@media (max-width:800px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4 card5"
+        "card4 card5";
+        grid-template-columns: 340px 330px;
+        grid-template-rows: 600px 320px; 
+        margin-left: 20px;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 30px;
+        margin-left: 50px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 270px;
+        height: 300px;
+        margin-left: -5px;
+    }
+    .card4 .form-container input {
+        width: 270px;
+        height: 40px;
+    }
+    .card4 .payment-metod {
+        display: none;
+    }
+    .card5 {
+        position: relative;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 70px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
+
+@media (min-width:768px) and (max-width: 799px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4 card5"
+        "card4 card5";
+        grid-template-columns: 320px 320px;
+        grid-template-rows: 600px 320px; 
+        margin-left: 20px;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 30px;
+        margin-left: 50px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 270px;
+        height: 300px;
+        margin-left: -5px;
+    }
+    .card4 .form-container input {
+        width: 270px;
+        height: 40px;
+    }
+    .card4 .payment-metod {
+        display: none;
+    }
+    .card5 {
+        position: relative;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 70px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
+
+@media (max-width:540px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4"
+        "card4"
+        "card5"
+        "card5";
+        grid-template-columns: 100%;
+        grid-template-rows: 1000px 250px; 
+        margin-left: 0px !important;
+        margin-top: -100px !important;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 400px !important; 
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 10px;
+        margin-left: 100px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 370px;
+        height: 300px;
+        margin-left: -50px;
+    }
+    .card4 .form-container input {
+        width: 370px;
+        height: 40px;
+        margin-left: -50px;
+    }
+    .card5 {
+        position: relative;
+        top: -320px;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 70px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
+
+@media (min-width:411px) and (max-width: 414px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4"
+        "card4"
+        "card5"
+        "card5";
+        grid-template-columns: 100%;
+        grid-template-rows: 1000px 250px; 
+        margin-left: 0px !important;
+        margin-top: -100px !important;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 350px !important; 
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 10px;
+        margin-left: 60px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 370px;
+        height: 300px;
+    }
+    .card4 .form-container input {
+        width: 370px;
+        height: 40px;
+    }
+    .card5 {
+        position: relative;
+        top: -320px;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 70px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
+
+@media (max-width:375px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4"
+        "card4"
+        "card5"
+        "card5";
+        grid-template-columns: 100%;
+        grid-template-rows: 1000px 250px; 
+        margin-left: 0px !important;
+        margin-top: -100px !important;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 279px !important;
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 10px;
+        margin-left: 70px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 340px;
+        height: 300px;
+    }
+    .card4 .form-container input {
+        width: 350px;
+        height: 40px;
+    }
+    .card5 {
+        position: relative;
+        top: -320px;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 70px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
+
+
+@media (max-width:360px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4"
+        "card4"
+        "card5"
+        "card5";
+        grid-template-columns: 100%;
+        grid-template-rows: 700px 600px; 
+        margin-left: 0px !important;
+        margin-top: -100px !important;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 300px !important;
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 10px;
+        margin-left: 60px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 340px;
+        height: 300px;
+    }
+    .card4 .form-container input {
+        width: 320px;
+        height: 40px;
+    }
+    .card5 {
+        position: relative;
+        top: -320px;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 70px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
+
+
+@media (max-width:320px) {
+    #steptwo {
+        display: grid;
+        grid-template-areas:
+        "card4"
+        "card4"
+        "card5"
+        "card5";
+        grid-template-columns: 100%;
+        grid-template-rows: 1000px 250px; 
+        margin-left: 0px !important;
+        margin-top: -100px !important;
+        justify-items: center;
+     }
+     .card4 {
+         height: 900px;
+     }
+     .card4 .form-container {
+        display: grid;
+        grid-template-columns: 280px !important;
+        grid-template-rows: 70px 70px 70px; 
+        margin-top: 10px;
+        justify-items: center;
+    }
+    .card4 .form-container .form {
+        width: 280px;
+        height: 300px;
+        margin-left: -50px;
+    }
+    .card4 .form-container input {
+        width: 280px;
+        height: 40px;
+        margin-left: -50px;
+    }
+    .card5 {
+        position: relative;
+        top: -260px;
+    }
+    .card5 .rank {
+        position: relative;
+        left: 80px;
+        margin-left: 0px !important;
+    }
+    .card5 .padd {
+        margin-left: 90px;
+    }
+    .card5 .dude {
+        position: relative;
+        left: 100px;
+        width: 300px;
+    }
+}
