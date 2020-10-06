@@ -98,12 +98,13 @@ export default function StepOne({ set }) {
 
     const calculatePrice = () => {
 
+        setPrice(0)
+        setDays(0)
 
         const fromIndex = getIndexOfRank(fromRef.current)
         const toIndex = getIndexOfRank(toRef.current)
 
-        setPrice(0)
-        setDays(0)
+
         const intDivFrom = parseInt(divFromRef.current)
         const intDivTo = parseInt(divToRef.current)
         if (fromIndex <= toIndex) {
@@ -114,12 +115,12 @@ export default function StepOne({ set }) {
                     currPrice += pricing[i].price_per_div * 4
                     currDays += pricing[i].days_per_div * 4
                 }
-
                 currPrice += pricing[fromIndex].price_per_div * intDivFrom
                 currDays += pricing[fromIndex].days_per_div * intDivFrom
 
                 currPrice += pricing[toIndex].price_per_div * (4 - intDivTo)
                 currDays += pricing[toIndex].days_per_div * (4 - intDivTo)
+
                 setDays(currDays)
                 setPrice(currPrice)
 
@@ -327,8 +328,8 @@ export default function StepOne({ set }) {
 
     return (
         <div>
-            <Header/>
-            <MiniHeader/>
+            <Header />
+            <MiniHeader />
             <section id="grilla">
                 <section id="card1" className="card1">
                     <h1 className="title"> Selecciona tu <span> liga actual </span> </h1>
@@ -391,7 +392,7 @@ export default function StepOne({ set }) {
                             </select>
                             <div className="divition" style={{ visibility: visTo }}>
                                 <select name="divisions" onChange={(e) => changeDivision(e, divToRef)}>
-                                    <option value="10">Division IV </option>
+                                    <option value="4">Division IV </option>
                                     <option value="3"> Division III </option>
                                     <option value="2"> Division II </option>
                                     <option value="1"> Division I </option>
@@ -480,9 +481,9 @@ export default function StepOne({ set }) {
                                     <div className="services">
                                         <p className="title2">Servicios adicionales <br /> con tu compra </p>
                                         <p> <img src={verifry} className="icon"></img> Soporte en Discord 24/7 </p> { /* Aca va la imagen verify */}
-                                        <p> <img src={verifry}  className="icon"></img> Rango Vip en nuestro Discord </p>
-                                        <p> <img src={verifry}  className="icon"></img> Chat con tu Booster </p>
-                                        <p> <img src={verifry}  className="icon"></img> Acceso a beneficios </p>
+                                        <p> <img src={verifry} className="icon"></img> Rango Vip en nuestro Discord </p>
+                                        <p> <img src={verifry} className="icon"></img> Chat con tu Booster </p>
+                                        <p> <img src={verifry} className="icon"></img> Acceso a beneficios </p>
                                         <hr />
                                     </div>
                                     <div className="continue" style={{ visibility: cont }} onClick={() => set("2")}>

@@ -1,5 +1,5 @@
 import React, { createContext, useRef, useState } from 'react'
-
+import axios from 'axios'
 
 export const prov = createContext()
 
@@ -26,13 +26,28 @@ export default function StateProvider(props) {
     const [message, setMessage] = useState('')
 
     const fetchInformation = () => {
-        console.log(summoners)
-        console.log(username)
-        console.log(password)
-        console.log(email)
-        console.log(cemail)
-        console.log(ref)
-        console.log(message)
+        const from = `${fromRank} ${divFromRef.current}`
+        const to = `${toRank} ${divToRef.current}`
+        const server = serverRef.current
+        const mode = (fastRef.current) ? "Fast service" : "Normal service"
+        const dc = (discordRef.current) ? "SI" : "NO"
+        const queue = modeRef.current
+        let ch = []
+        for (let c of champs) {
+            ch.push(c.champ_name)
+        }
+        const data = { summoners, username, password, email, cemail, ref, message, price, days, from, to, server, mode, dc, queue, lanes, ch }
+
+        axios.post('https://thunderboosting.com/boost', data).then((resp) => {
+            return resp
+        })
+    }
+
+    const romanize = (num) => {
+        if (num === "1") return 'I'
+        else if (num === "2") return 'II'
+        else if (num === "3") return 'III'
+        return 'IV'
     }
 
     const rt = {
@@ -53,7 +68,7 @@ export default function StateProvider(props) {
         ref, setRef,
         message, setMessage,
 
-        fetchInformation,
+        fetchInformation, romanize
     }
 
 

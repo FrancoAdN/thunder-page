@@ -5,9 +5,9 @@ import './payment.css'
 
 
 
-export default function Payment() {
+export default function Payment({ set }) {
 
-    const { email, price } = useContext(prov)
+    const { email, price, fetchInformation } = useContext(prov)
     // const testkey = "TEST-93a454a8-2835-421c-b74c-e97a501cefc3"
     const prod_key = "APP_USR-7d3c2ba3-1e93-4383-b931-5fd9e302d204"
 
@@ -128,7 +128,17 @@ export default function Payment() {
                 }
                 // console.log(data)
                 // form.submit();
-                axios.post('https://thunderboosting.com/process_payment', data).then((resp) => console.log(resp.status))
+                axios.post('https://thunderboosting.com/process_payment', data).then((resp) => {
+                    if (resp !== 400) {
+                        const rtn = fetchInformation()
+                        if (rtn === 400) {
+                            alert("Hubo un error al enviar tu información por favor intente más tarde")
+                        } else {
+                            alert("Pago existoso")
+                            set(false)
+                        }
+                    } else alert("Hubo un error en el pago, por favor reviselo")
+                })
 
             } else {
                 alert("Verify filled data!\n" + JSON.stringify(response, null, 4));
@@ -140,27 +150,28 @@ export default function Payment() {
 
 
     return (
+
         <form className="paymentForm" action="" method="post" id="paymentForm" onSubmit={(e) => e.preventDefault()}>
             <h3 className="paymentTitle">Detalles del comprador</h3>
             <div className="paymentHeader">
                 <div>
                     <label htmlFor="email">E-mail</label>
                     <input id="email" name="email" type="text" value={email} />
-                </div> 
+                </div>
                 <div className="typeDoc">
                     <label htmlFor="docType"></label>
                     <select id="docType" name="docType" data-checkout="docType" type="text"></select>
                 </div>
                 <div className="numberDoc">
                     <label htmlFor="docNumber"></label>
-                    <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text" placeholder="Número de documento"/>
+                    <input id="docNumber" name="docNumber" data-checkout="docNumber" type="text" placeholder="Número de documento" />
                 </div>
             </div>
             <h3 className="paymentTitle2">Detalles de la tarjeta</h3>
             <div className="payHeader">
                 <div className="paymentUser">
                     <label htmlFor="cardholderName">Titular de la tarjeta</label>
-                    <input id="cardholderName" type="text" data-checkout="cardholderName" type="text" placeholder=""/>
+                    <input id="cardholderName" type="text" data-checkout="cardholderName" type="text" placeholder="" />
                 </div>
                 <div className="paymentCardNumber">
                     <label htmlFor="cardNumber">Número de la tarjeta</label>
@@ -183,7 +194,7 @@ export default function Payment() {
                             onDrag={() => { return false }} onDrop={() => { return false }} autoComplete="off" />
                     </div>
                 </div>
-                <div className="paymentCode"> 
+                <div className="paymentCode">
                     <label htmlFor="securityCode">CVC</label>
                     <input id="securityCode" data-checkout="securityCode" type="text" placeholder="000"
                         onPaste={() => { return false }}
@@ -208,6 +219,7 @@ export default function Payment() {
                 </div>
             </div>
         </form>
+
     )
 }
 
