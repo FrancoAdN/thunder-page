@@ -173,7 +173,7 @@ export default function StepTwo({ set }) {
                         <div class="payment-options">
                             <p> El método de pago por defecto es con tarjeta de débito o crédito a través de nuestra plataforma. Si usted
                                 desea realizar el mismo por otro medio, como <a href="">Mercado Pago</a>, <a href="https://www.paypal.com/paypalme/eloboostlat">Paypal</a> o transferencia directa a CVU <a href="">( CVU: 0000003100014410698580)</a>,
-                                puedes contactarnos en nuestras redes sociales o en nuestro Discord para brindar un mejor soporte con su </p>
+                                puedes contactarnos en nuestras redes sociales o en nuestro Discord para brindar un mejor soporte con su pago</p>
                         </div>
                     </div>
                 </div>
