@@ -610,7 +610,7 @@ welcome
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(https://media.giphy.com/media/XDvrePLcxOB9BGQGPX/giphy.gif);
+  background-image: url(../images/banner.gif);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; 

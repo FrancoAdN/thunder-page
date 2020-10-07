@@ -26,6 +26,7 @@ export default function Valorant() {
                                     <h5 className="card2-title">Valorant Coaching</h5>
                                     <p className="card2-text">Te brindamos ayuda y consejos para mejorar tu experiencia de
                                     juego.</p>
+                
                                     <button className="btn btn-primary">¡Proximamente!</button>
                                 </div>
                             </div>

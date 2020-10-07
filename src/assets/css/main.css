@@ -85,19 +85,19 @@
 }
 
 .card-content:nth-child(1):before {
-  background-image: url(../images/test3.gif);
+  background-image: url(../images/zed.gif);
 }
 
 .card-content:nth-child(2):before {
-  background-image: url(../images/test4.gif);
+  background-image: url(../images/ashe.gif);
 }
 
 .card-content:nth-child(3):before {
-  background-image: url(https://media.giphy.com/media/5xbwOVKNn3j68/giphy.gif);
+  background-image: url(../images/aurelion.gif);
 }
 
 .card-content:nth-child(4):before {
-  background-image: url(../images/test10.gif);
+  background-image: url(../images/ezreal.gif);
 }
 
 .content {
