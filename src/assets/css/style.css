@@ -271,9 +271,10 @@ html, body {
 }
 
 a.main-button-slider {
-  font-size: 13px;
+  font-size: 14px;
   border-radius: 20px;
   padding: 12px 20px;
+  font-weight: 600;
   background-color: #ff589e;
   text-transform: uppercase;
   color: #fff;
