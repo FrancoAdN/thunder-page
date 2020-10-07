@@ -211,7 +211,15 @@ export default function StepTwo({ set }) {
                         </div>
                     </div>
                 </div>
-         </form>
+             </form>
+             <Modal
+                isOpen={payment}
+                onRequestClose={() => setPayment(false)}
+                className={"modal-payment"}
+                overlayClassName={"modal-payment-overlay"}
+            >
+                <Payment set={setPayment} />
+            </Modal>
         </div>
     )
 }
