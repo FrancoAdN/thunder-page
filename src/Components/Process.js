@@ -12,7 +12,7 @@ export default function Process() {
                         <div className="step step-test-1">
                             <span className="number">01</span>
                             <h3>Contratas nuestro servicio</h3>
-                            <p> Elegis el tipo de boosting que deseas, realizas el pago y nosotros nos pondremos en contacto
+                            <p> Elegís el tipo de boosting que deseas, realizas el pago y nosotros nos pondremos en contacto
                             para asesorarte.</p>
                         </div>
                     </div>
@@ -20,7 +20,7 @@ export default function Process() {
                         <div className="step">
                             <span className="number">02</span>
                             <h3>Empezamos a trabajar</h3>
-                            <p> Uno de nuestros boosters te asistira en el trayecto y empezara a trabajar con tu cuenta con
+                            <p> Uno de nuestros boosters te asistirá en el trayecto y empezara a trabajar con tu cuenta con
                             el servicio contratado.</p>
                         </div>
                     </div>
@@ -28,7 +28,7 @@ export default function Process() {
                         <div className="step">
                             <span className="number">03</span>
                             <h3> Completamos el servicio </h3>
-                            <p> Una vez terminado nuestro trabajo, tu cuenta quedara con el nivel deseado, estadisticas
+                            <p> Una vez terminado nuestro trabajo, tu cuenta quedara con el nivel deseado, estadísticas
                             superiores y futuros beneficios</p>
                         </div>
                     </div>

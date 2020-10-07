@@ -7,18 +7,15 @@ export default function Footer() {
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12">
                         <ul className="social">
-                            <li><a href="https://www.instagram.com/"><i className="fa fa-instagram"></i></a></li>
-                            <li><a href="https://www.facebook.com/"><i className="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.twitter.com/"><i className="fa fa-twitter"></i></a></li>
-                            <li><a href="https://www.youtube.com/"><i className="fa fa-youtube"></i></a></li>
-                            <li><a href="https://www.whatsapp.com/"><i className="fa fa-whatsapp"></i></a></li>
+                            <li><a href="https://www.instagram.com/thunderboosting/?"><i className="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/thunderboosting/"><i className="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-lg-12">
-                        <p className="copyright">Copyright &copy; 2020 ThunderBoosting.com - Design: <img
-                            src={discord} className="discord-icon" alt="discord" /> yazzi#9425 </p>
+                        <p className="copyright">Copyright &copy; 2020 thunderboosting.com - Design: <img
+                            src={discord} className="discord-icon" alt="discord" /> 001#2346 </p>
                     </div>
                 </div>
             </div>

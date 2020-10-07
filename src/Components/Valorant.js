@@ -11,7 +11,7 @@ export default function Valorant() {
                                 <h1> Nuevos servicios </h1>
                                 <p> Debido a la creciente demanda de los mismos, hemos implementado dos nuevos servicios
                                 para
-                                satisfacer a nuestros clientes en otros ambitos del boosting. </p>
+                                satisfacer a nuestros clientes en otros ámbitos del boosting. </p>
                             </div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@ export default function Valorant() {
                                     <p className="card2-text">Te brindamos ayuda y consejos para mejorar tu experiencia de
                                     juego.</p>
                 
-                                    <button className="btn btn-primary">¡Proximamente!</button>
+                                    <button className="btn btn-primary">¡Próximamente!</button>
                                 </div>
                             </div>
                             {/* <!-- card2 --> */}
@@ -38,8 +38,8 @@ export default function Valorant() {
                                 <div className="card2-body">
                                     <h5 className="card2-title">Valorant Boosting</h5>
                                     <p className="card2-text">Nos encargamos de alcanzar tu rango deseado y mejorar tus
-                                    estadisticas.</p>
-                                    <button className="btn btn-primary">¡Proximamente!</button>
+                                    estadísticas.</p>
+                                    <button className="btn btn-primary">¡Próximamente!</button>
                                 </div>
                             </div>
                             {/* <!-- card3 --> */}
@@ -49,9 +49,9 @@ export default function Valorant() {
                                 </div>
                                 <div className="card2-body">
                                     <h5 className="card2-title">Valorant Training</h5>
-                                    <p className="card2-text">Te brindamos distintas tecnicas y entrenamientos diarios para dar
+                                    <p className="card2-text">Te brindamos distintas técnicas y entrenamientos diarios para dar
                                     tu 100%.</p>
-                                    <button className="btn btn-primary">¡Proximamente!</button>
+                                    <button className="btn btn-primary">¡Próximamente!</button>
                                 </div>
                             </div>
                         </div>

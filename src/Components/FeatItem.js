@@ -13,13 +13,13 @@ export default function FeatItem() {
                             <p> En Thunder contamos con un gran numero de boosters experimentados en el mercado,
                             del boosting los cuales cuentan con <span className="mark">una amplia trayectoria</span>. Se
                             realizaron distintos
-                            estudios e investigaciones de las estadisticas de los mismos, comprobando su <span
+                            estudios e investigaciones de las estadísticas de los mismos, comprobando su <span
                                     className="mark">habilidad
                                 y rendimiento</span> en el juego cumpliendo los requisitos para ser boosters de Thunder.
                             <br />
                             Agregado a esto,buscamos que nuestros boosters ya hayan tenido una previa experiencia
                             en el boosting. La calidad, eficiencia y rapidez de nuestros boosters nos diferencia
-                            de los demas a un <span className="mark">nivel superior</span>.
+                            de los demás a un <span className="mark">nivel superior</span>.
                         </p>
                         </div>
                     </div>

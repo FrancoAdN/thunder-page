@@ -11,7 +11,7 @@ export default function Services() {
                         <div className="offset-lg-3 col-lg-6">
                             <div className="info">
                                 <h1> Nuestros servicios </h1>
-                                <p> Contamos con distintos tipos de boosting para la satisfaccion de nuestros clientes,
+                                <p> Contamos con distintos tipos de boosting para la satisfacción de nuestros clientes,
                                 brindando la mejor experiencia de eloboost.
                                 Tu liga deseada esta solo a un click de distancia. </p>
                             </div>
@@ -37,7 +37,7 @@ export default function Services() {
                             <div className="content">
                                 <h2 className="title">Boost Solo/Duo Promotion</h2>
                                 <p className="copy"> Si te encuentras a solo un paso de avanzar de liga, esta asegura la
-                                victoria de su promocion. </p>
+                                victoria de su promoción. </p>
                                 <Link to={"/boost"}>
                                     <button className="btn"> ¡Contratar! </button>
                                 </Link>

@@ -138,7 +138,7 @@ export default function StepTwo({ set }) {
             <div id="card4" class="card4"> 
                 <div class="title">
                     <h1> <span> Completar </span> con <span > sus </span> datos </h1>
-                    <p> Si tienes alguna duda sobre nuestro servicio, no dudes en contactarnos por <span> <a href="https://discord.gg/CrxGDbF"> Discord.</a> </span>
+                    <p> Si tienes alguna duda sobre nuestro servicio, no dudes en contactarnos por <span> <a href="https://discord.gg/ESj7XYE"> Discord.</a> </span>
                     <br/> Gracias por confiar en nosotros ;)
                     </p>
                     </div>
@@ -167,8 +167,8 @@ export default function StepTwo({ set }) {
                     </div>
                     <div class="payment-metod">
                         <div class="title">
-                            <h1> Metodos de pago disponible </h1>
-                            <p> Si no encuentra su metodo de pago disponible, consultenos por el mismo a traves de <span> <a href="https://discord.gg/CrxGDbF"> Discord.</a> </span>                    </p>
+                            <h1> Métodos de pago disponible </h1>
+                            <p> Si no encuentra su método de pago disponible, consúltenos por el mismo a través de <span> <a href="https://discord.gg/ESj7XYE"> Discord.</a> </span>                    </p>
                         </div>
                         <div class="payment-options">
                             <p> El método de pago por defecto es con tarjeta de débito o crédito a través de nuestra plataforma. Si usted
@@ -207,7 +207,7 @@ export default function StepTwo({ set }) {
                         </div>
                         <button className="pay" type="submit"> Pagar </button>
                         <div class="dude">
-                            <p> Ante cualquier duda con tu pago, contactanos a <a href="https://discord.gg/CrxGDbF"> Discord.</a> </p>
+                            <p> Ante cualquier duda con tu pago, contactanos a <a href="https://discord.gg/ESj7XYE"> Discord.</a> </p>
                         </div>
                     </div>
                 </div>

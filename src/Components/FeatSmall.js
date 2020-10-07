@@ -16,7 +16,7 @@ export default function FeatSmall() {
                                         <i><img src={thundericon} className="thunder-icon" alt="icon" /></i>
                                     </div>
                                     <h5 className="features-title"> Eficiencia </h5>
-                                    <p> Eficiencia al maximo para la completa satisfaccion de nuestros clientes.</p>
+                                    <p> Eficiencia al máximo para la completa satisfacción de nuestros clientes.</p>
                                 </div>
                             </div>
                             {/* <!-- ***** Features Small Item End ***** --> */}
@@ -29,7 +29,7 @@ export default function FeatSmall() {
                                         <i><img src="https://img.icons8.com/fluent/48/000000/exercise.png" alt="exercise" /></i>
                                     </div>
                                     <h5 className="features-title"> Rapidez </h5>
-                                    <p> Los mejores y mas rapidos tiempos de boosting para nuestros clientes. </p>
+                                    <p> Los mejores y mas rápidos tiempos de boosting para nuestros clientes. </p>
                                 </div>
                             </div>
                             {/* <!-- ***** Features Small Item End ***** --> */}

@@ -17,12 +17,12 @@ export default function FeatBig() {
                         </div>
                         <div className="left-text">
                             <p> En Thunder nos enfocamos en <span className="mark">mejorar la experiencia del jugador</span>,
-                            brindandole distintos consejos y estrategias incluidas
+                            brindándole distintos consejos y estrategias incluidas
                             en el boost a nuestros clientes haciendo que los mismos puedan mejorar su jugabilidad y dar
                             un mayor rendimiento en las ligas que se
-                            propogan alcanzar. Nuesto servicio se destaca por la <span className="mark">rapidez y la
+                            propongan alcanzar. Nuestro servicio se destaca por la <span className="mark">rapidez y la
                                 eficiencia</span> que consiguen nuestros boosters
-                            despues de años de experiencia en el mercado.
+                            después de años de experiencia en el mercado.
                         </p>
                         </div>
                     </div>
