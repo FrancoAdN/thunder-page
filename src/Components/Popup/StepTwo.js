@@ -4,6 +4,8 @@ import Header from './Header'
 import './style.css'
 import './responsive.css'
 import MiniHeader from './MiniHeader'
+import Payment from './Payment'
+import Modal from 'react-modal'
 import payments from './payments.png'
 import payments2 from './payments2.png'
 import brubank from './payments-img/brubank.png'
@@ -16,6 +18,7 @@ export default function StepTwo({ set }) {
     const [namefrom, setNamefrom] = useState('')
     const [imgto, setImgto] = useState(require('./ranks-lol/9.png'))
     const [nameto, setNameto] = useState('')
+    const [payment, setPayment] = useState(false)
 
 
 
@@ -26,14 +29,10 @@ export default function StepTwo({ set }) {
         //step 2
         summoners, setSummoners, username, setUsername, password, setPassword,
         email, setEmail, cemail, setCemail, ref, setRef, message, setMessage,
+        romanize
     } = useContext(prov)
 
-    function romanize(num) {
-        if (num === "1") return 'I'
-        else if (num === "2") return 'II'
-        else if (num === "3") return 'III'
-        return 'IV'
-    }
+
 
     useEffect(() => {
 
@@ -126,7 +125,8 @@ export default function StepTwo({ set }) {
 
     const formSubmit = (e) => {
         e.preventDefault()
-        set("3")
+        // set("3")
+        setPayment(true)
     }
 
     return (
@@ -141,25 +141,25 @@ export default function StepTwo({ set }) {
                     <p> Si tienes alguna duda sobre nuestro servicio, no dudes en contactarnos por <span> <a href="https://discord.gg/CrxGDbF"> Discord.</a> </span>
                     <br/> Gracias por confiar en nosotros ;)
                     </p>
-                 </div>
+                    </div>
                     <div class="form-container" >
                         <div class="user">
-                        <label > Nombre de invocador </label> <br /> <input required type="text" value={summoners} onChange={(e) => setSummoners(e.target.value)} />
+                            <label > Nombre de invocador </label> <br /> <input required type="text" value={summoners} onChange={(e) => setSummoners(e.target.value)} />
                         </div>
                         <div class>
-                        <label > Usuario </label> <br /> <input required type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                            <label > Usuario </label> <br /> <input required type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
                         </div>
                         <div class>
-                            <label > Contraseña </label> <br /> <input required type="text" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                            <label > Contraseña </label> <br /> <input required type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
                         <div class>
-                            <label className="" > Email </label> <br /> <input required className="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <label className="" > Email </label> <br /> <input required className="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div class>
-                            <label className="" > Confirmar email </label> <br /> <input required className="email" type="email" value={cemail} onChange={(e) => setCemail(e.target.value)}/>
+                            <label className="" > Confirmar email </label> <br /> <input required className="email" type="email" value={cemail} onChange={(e) => setCemail(e.target.value)} />
                         </div>
                         <div class>
-                            <label className="" > Referido </label> <br /> <input required className="email" type="text" value={ref} onChange={(e) => setRef(e.target.value)}/>
+                            <label className="" > Referido </label> <br /> <input required className="email" type="text" value={ref} onChange={(e) => setRef(e.target.value)} />
                         </div>
                         <div class="">
                             <label> Mensaje de contacto (Opcional) </label> <br /> <textarea type="text" class="form" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
@@ -172,8 +172,8 @@ export default function StepTwo({ set }) {
                         </div>
                         <div class="payment-options">
                             <p> El método de pago por defecto es con tarjeta de débito o crédito a través de nuestra plataforma. Si usted
-                                desea realizar el mismo por otro medio, como <a href="">Mercado Pago</a>, <a href="https://www.paypal.com/paypalme/eloboostlat">Paypal</a> o transferencia directa a CVU <a href="">( CVU: 0000003100014410698580)</a>, 
-                                puedes contactarnos en nuestras redes sociales o en nuestro Discord para brindar un mejor soporte con su </p>
+                                desea realizar el mismo por otro medio, como <a href="">Mercado Pago</a>, <a href="https://www.paypal.com/paypalme/eloboostlat">Paypal</a> o transferencia directa a CVU <a href="">( CVU: 0000003100014410698580)</a>,
+                                puedes contactarnos en nuestras redes sociales o en nuestro Discord para brindar un mejor soporte con su pago</p>
                         </div>
                     </div>
                 </div>
@@ -181,32 +181,32 @@ export default function StepTwo({ set }) {
                 <div id="card5" class="card5">
                     <div class="title">
                         <h1> Resumen de compra </h1>
-                        <hr/>
+                        <hr />
                     </div>
                     <div class="resume">
-                        <img src={imgfrom} class="rank"/> { /* Aca va la imagen de los rank */ }
-                        <img src={imgto} class="rank"/> { /* Aca va la imagen de los rank */ }
+                        <img src={imgfrom} class="rank" /> { /* Aca va la imagen de los rank */}
+                        <img src={imgto} class="rank" /> { /* Aca va la imagen de los rank */}
                         <p class="rank-status"> Desde {namefrom} hasta {nameto} </p>
-                        <hr/>
+                        <hr />
                     </div>
                     <div class="payment-info">
                         <div class="price">
                             <a class="padd"> Precio final </a>
-                            {price ? <p className="old"> <del> ${price + (price * 0.2)} ARS </del></p> : <p></p> }
+                            {price ? <p className="old"> <del> ${price + (price * 0.2)} ARS </del></p> : <p></p>}
                             <p class="now"> ${price} ARS </p>
-                            <hr/>
+                            <hr />
                         </div>
                         <div class="time">
                             <a class="padd"> Tiempo total </a>
                             <p class="count"> {days} </p>
                             <p> Dias </p>
-                            <hr/>
-                            <p> <img src={verify} class="icon"/> Soporte al cliente 24/7 </p> { /* Aca va la imagen verify */ }
-                            <p> <img src={verify} class="icon"/> Acceso a beneficios exclusivos </p> { /* Aca va la imagen verify */ }
-                            <p> <img src={verify} class="icon"/> Servicios adicionales incluidos </p> { /* Aca va la imagen verify */ }
+                            <hr />
+                            <p> <img src={verify} class="icon" /> Soporte al cliente 24/7 </p> { /* Aca va la imagen verify */}
+                            <p> <img src={verify} class="icon" /> Acceso a beneficios exclusivos </p> { /* Aca va la imagen verify */}
+                            <p> <img src={verify} class="icon" /> Servicios adicionales incluidos </p> { /* Aca va la imagen verify */}
                         </div>
                         <button className="pay" type="submit"> Pagar </button>
-                        <div class="dude"> 
+                        <div class="dude">
                             <p> Ante cualquier duda con tu pago, contactanos a <a href="https://discord.gg/CrxGDbF"> Discord.</a> </p>
                         </div>
                     </div>

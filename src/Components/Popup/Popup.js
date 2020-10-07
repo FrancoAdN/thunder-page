@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import StepOne from './StepOne'
 import StepTwo from './StepTwo'
-import Payment from './Payment'
+
 
 export default function Popup() {
     // const [two, setTwo] = useState(false)
@@ -14,5 +14,5 @@ export default function Popup() {
         return (<StepOne set={setStep} />)
     else if (step === "2")
         return (<StepTwo set={setStep} />)
-    return (<Payment />)
+    // return (<Payment />)
 }
