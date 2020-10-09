@@ -7,8 +7,8 @@ export default function Footer() {
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12">
                         <ul className="social">
-                            <li><a href="https://www.instagram.com/thunderboosting/?"><i className="fa fa-instagram"></i></a></li>
-                            <li><a href="https://www.facebook.com/thunderboosting/"><i className="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/thunderboosting_/"><i className="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/Thunder-Boosting-104946388051491"><i className="fa fa-facebook"></i></a></li>
                         </ul>
                     </div>
                 </div>

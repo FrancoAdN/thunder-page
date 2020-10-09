@@ -417,7 +417,7 @@ export default function StepOne({ set }) {
                                         calculatePrice()
                                     }}>
                                         <option value="LAS"> LAS </option>
-                                        <option value="BR"> BR (+25%)</option>
+                                        <option value="BR"> BR </option>
                                     </select>
                                 </div>
                                 <div className="server">
@@ -425,7 +425,7 @@ export default function StepOne({ set }) {
                                     <p> Modo Queue: </p>
                                     <select name="modo" onChange={modeChange}>
                                         <option value="SOLO"> Solo </option>
-                                        <option value="DUO"> Duo (+50%)</option>
+                                        <option value="DUO"> Duo </option>
                                         <option value="FLEXIBLE"> Flexible </option>
                                     </select>
                                 </div>
